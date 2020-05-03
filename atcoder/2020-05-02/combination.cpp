@@ -1,7 +1,7 @@
 #include "bits/stdc++.h"
 using namespace std;
 
-void makeCombUtil(vector<vector<int> >& ans, vector<int>& tmp, int n, int left, int k) {
+void makeCombUtil(vector<vector<int> > &ans, vector<int> &tmp, int n, int left, int k) {
     if (k == 0) {
         ans.push_back(tmp);
         return ;
