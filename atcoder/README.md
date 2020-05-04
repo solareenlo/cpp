@@ -1,2 +1,2 @@
-# atcoder
-- AtCoder で解ける問題達を C++ で解いたリポジトリ．
+# AtCoder
+- AtCoder で解ける問題を C++ で解いたリポジトリ．
