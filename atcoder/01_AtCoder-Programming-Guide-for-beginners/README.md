@@ -18,3 +18,10 @@ curl -O https://raw.githubusercontent.com/gcc-mirror/gcc/master/libstdc%2B%2B-v3
 ```cpp
 #include "bits/stdc++.h"
 ```
+
+## References
+### EX22
+- [pairのsecondを基準にソート](https://perogram.hateblo.jp/entry/2018/12/17/045943)
+
+### EX23
+- [How to sort a map by value in C++](https://www.educative.io/edpresso/how-to-sort-a-map-by-value-in-cpp)
