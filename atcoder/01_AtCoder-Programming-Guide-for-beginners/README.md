@@ -1,4 +1,4 @@
-# atcoder-programming-guide-for-beginners
+# C++ 入門 AtCoder Programming Guide for beginners (APG4b)
 - AtCoder で行える C++ 初心者用の練習問題．
 - https://atcoder.jp/contests/APG4b/tasks
 
