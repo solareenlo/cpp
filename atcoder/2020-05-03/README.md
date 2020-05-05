@@ -12,3 +12,7 @@
 
 ## F: Three Variables Game
 - `std::endl` は遅いので，`'\n'` を使う．
+- ジェネリックラムダを使用しているので，`-std=c++14` オプションを付与する．
+    ```bash
+    g++ -std=c++14 F_Three-Variables-Game.cpp
+    ```
