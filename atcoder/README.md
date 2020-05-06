@@ -13,3 +13,4 @@
 ### 競プロ独特の書き方
 - [競技プログラミングにおけるコードの書き方とその利便性](https://www.slideshare.net/Roadagain/ss-71620380)
 - [kurokoji さんの template.cpp の説明](https://github.com/kurokoji/.cpp-Template/wiki)
+- [cin, cout は遅いのでそれぞれ違う書き方をする](https://qiita.com/blackcurrant/items/312ea2471900132fbd6a)
