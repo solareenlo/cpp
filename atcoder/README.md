@@ -5,6 +5,11 @@
 - https://kenkoooo.com/atcoder/#/table/solareenlo
 
 ## References
+### 進め方
 - [レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【上級編：目指せレッドコーダー！】](https://qiita.com/e869120/items/acba3dd8649d913102b5)
 - [レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【中級編：目指せ水色コーダー！】](https://qiita.com/e869120/items/eb50fdaece12be418faa)
 - [レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【初級編：競プロを始めよう】](https://qiita.com/e869120/items/f1c6f98364d1443148b3)
+
+### 競プロ独特の書き方
+- [競技プログラミングにおけるコードの書き方とその利便性](https://www.slideshare.net/Roadagain/ss-71620380)
+- [kurokoji さんの template.cpp の説明](https://github.com/kurokoji/.cpp-Template/wiki)
