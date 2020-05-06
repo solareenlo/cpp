@@ -13,4 +13,7 @@
 ### 競プロ独特の書き方
 - [競技プログラミングにおけるコードの書き方とその利便性](https://www.slideshare.net/Roadagain/ss-71620380)
 - [kurokoji さんの template.cpp の説明](https://github.com/kurokoji/.cpp-Template/wiki)
+
+### 高速化テクニック
 - [cin, cout は遅いのでそれぞれ違う書き方をする](https://qiita.com/blackcurrant/items/312ea2471900132fbd6a)
+- [競プロで使える高速化テクニック](https://xuzijian629.hatenablog.com/entry/2019/03/31/130708)
