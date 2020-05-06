@@ -5,6 +5,9 @@
 - https://kenkoooo.com/atcoder/#/table/solareenlo
 
 ## References
+### 解き方
+- [競技プログラミングで解法を思いつくための典型的な考え方](https://algo-logic.info/how-to-think-cp/)
+
 ### 進め方
 - [レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【上級編：目指せレッドコーダー！】](https://qiita.com/e869120/items/acba3dd8649d913102b5)
 - [レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【中級編：目指せ水色コーダー！】](https://qiita.com/e869120/items/eb50fdaece12be418faa)
