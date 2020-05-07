@@ -5,7 +5,7 @@
 - https://kenkoooo.com/atcoder/#/table/solareenlo
 
 ## References
-## ei1333 さんによる競プロ C++ 用のライブラリ
+### ei1333 さんによる競プロ C++ 用のライブラリ
 - [ei1333/library](https://github.com/ei1333/library)
 
 ### 余りを簡単に求められる構造体
