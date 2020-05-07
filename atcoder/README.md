@@ -5,7 +5,7 @@
 - https://kenkoooo.com/atcoder/#/table/solareenlo
 
 ## References
-### 余りを簡単に求めるライブラリ
+### 余りを簡単に求められる構造体
 - [「1000000007 で割ったあまり」の求め方を総特集！ 〜 逆元から離散対数まで 〜](https://qiita.com/drken/items/3b4fdf0a78e7a138cd9a)
 - [modint 構造体を使ってみませんか？ \(C++\)](https://noshi91.hatenablog.com/entry/2019/03/31/174006)
 
