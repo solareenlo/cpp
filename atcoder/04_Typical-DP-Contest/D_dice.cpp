@@ -3,7 +3,7 @@
 using namespace std;
 #define REP(i, n) for (int i = 0; i < (n); i++)
 
-template<class T, class U> int d_count(T &num, U divisor) {
+template<class T, class U> inline int d_count(T &num, U divisor) {
     int count = 0;
     while (num % divisor == 0) {
         num /= divisor;
