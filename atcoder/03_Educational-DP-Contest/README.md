@@ -1,4 +1,5 @@
-# [Educational Dynamic Programing Contest](https://atcoder.jp/contests/dp)
+# [Educational DP Contest](https://atcoder.jp/contests/dp/tasks)
+- Dinamic Programming の練習を目的とした有志コンテストを解いたリポジトリ．
 
 ## References
 - [貰う DP と配る DP の比較](https://qiita.com/drken/items/ace3142967c4f01d42e9#%E8%B2%B0%E3%81%86-dp-%E3%81%A8%E9%85%8D%E3%82%8B-dp-%E3%81%AE%E6%AF%94%E8%BC%83)
