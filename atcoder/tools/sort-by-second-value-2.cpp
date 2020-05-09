@@ -7,7 +7,7 @@ using namespace std;
 #define ALL(vec) (vec).begin(), (vec).end()
 using P = pair<int, int>;
 
-inline bool compareBySecond(P a, P b) {
+inline bool compareBySecond(P &a, P &b) {
     if (a.second != b.second) {
         return a.second < b.second;
     } else {
