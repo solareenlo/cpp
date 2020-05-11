@@ -1,7 +1,7 @@
 # AtCoder
-- AtCoder で解ける問題を C++ で解いたリポジトリ．
+- AtCoder の問題を C++ で解いたリポジトリ．
 
-## 解け具合
+## 練習具合
 - https://kenkoooo.com/atcoder/#/table/solareenlo
 
 ## References
@@ -17,6 +17,10 @@
 - [競技プログラミングで解法を思いつくための典型的な考え方](https://algo-logic.info/how-to-think-cp/)
 
 ### 進め方
+- [AtCoder 版！蟻本 (発展的トピック編)](https://qiita.com/drken/items/0de3d205690d92307b7c)
+- [AtCoder 版！蟻本 (上級編)](https://qiita.com/drken/items/9b311d553aa434bb26e4)
+- [AtCoder 版！蟻本 (中級編)](https://qiita.com/drken/items/2f56925972c1d34e05d8)
+- [AtCoder 版！蟻本 (初級編)](https://qiita.com/drken/items/e77685614f3c6bf86f44)
 - [レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【上級編：目指せレッドコーダー！】](https://qiita.com/e869120/items/acba3dd8649d913102b5)
 - [レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【中級編：目指せ水色コーダー！】](https://qiita.com/e869120/items/eb50fdaece12be418faa)
 - [レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【初級編：競プロを始めよう】](https://qiita.com/e869120/items/f1c6f98364d1443148b3)
