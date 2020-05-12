@@ -6,3 +6,6 @@
 g++ -std=c++11 main.cpp
 g++ -std=c++14 main.cpp
 ```
+
+## Reference
+- [C++でクリーンなコードの書き方](https://qiita.com/elipmoc101/items/01003c82dbd2e464a071)
