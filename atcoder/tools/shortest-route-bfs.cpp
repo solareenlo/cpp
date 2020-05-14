@@ -28,7 +28,6 @@ inline int calDist(P from, P to, VVI map) {
         P currentPos = que.front(); // キューの先頭を見る
         int x = currentPos.first;
         int y = currentPos.second;
-        // cerr << x << ' ' << y << endl;
         que.pop(); // キューから先頭を pop する
 
         // 隣接頂点を探索
@@ -46,13 +45,10 @@ inline int calDist(P from, P to, VVI map) {
             }
         }
     }
-    cerr << width << ' ' << height << endl;
-    REP(i, height) {
-        REP(j, width) {
-            cout << setw(2) << dist[i][j] << ' ';
-        }
-        cerr << endl;
-    }
+    // REP(i, height) {
+    //     REP(j, width)
+    //         cout << setw(2) << dist[i][j] << ' ';
+    //     cout << endl;
+    // }
     return dist[to.second][to.first];
 }
-
