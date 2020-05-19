@@ -5,6 +5,10 @@
 - https://kenkoooo.com/atcoder/#/table/solareenlo
 
 ## References
+### 便利ツール
+#### 過去問に対して自動で push したり，入出力例を自動で試してくれたりするツール
+- [kyuridenamida/atcoder-tools](https://github.com/kyuridenamida/atcoder-tools)
+
 ### ライブラリ
 #### 競プロ C++ 用のライブラリ
 - [atcoder-live/library](https://github.com/atcoder-live/library)
