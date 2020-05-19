@@ -1,5 +1,6 @@
 # AtCoder Beginner Contest
 - ABC の解答リポジトリ．
+- [kyuridenamida/atcoder-tools](https://github.com/kyuridenamida/atcoder-tools) で解答の雛形を自動生成しています．
 
 |Contest|A|B|C|D|E|F|
 |---|---|---|---|---|---|---|
