@@ -6,7 +6,8 @@
 
 ## References
 ### ライブラリ
-#### ei1333 さんによる競プロ C++ 用のライブラリ
+#### 競プロ C++ 用のライブラリ
+- [atcoder-live/library](https://github.com/atcoder-live/library)
 - [ei1333/library](https://github.com/ei1333/library)
 
 #### 余りを簡単に求められる構造体
