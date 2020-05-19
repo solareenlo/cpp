@@ -3,7 +3,7 @@
 
 |Contest|A|B|C|D|E|F|
 |---|---|---|---|---|---|---|
-|ABC168|P: [A - ∴ (Therefore)](https://atcoder.jp/contests/abc168/tasks/abc168_a)<br>A: [ans]()|B - |C - |D - |E - |F - |
+|[ABC168](https://github.com/solareenlo/cpp/tree/master/atcoder/05_AtCoder-Beginner-Contest/ABC168)|[A - ∴ (Therefore)](https://atcoder.jp/contests/abc168/tasks/abc168_a): [Ans](https://github.com/solareenlo/cpp/blob/master/atcoder/05_AtCoder-Beginner-Contest/ABC168/A.cpp)|B - |C - |D - |E - |F - |
 |ABC167|A - |B - |C - |D - |E - |F - |
 |ABC166|A - |B - |C - |D - |E - |F - |
 |ABC165|A - |B - |C - |D - |E - |F - |
