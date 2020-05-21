@@ -35,6 +35,12 @@
 - [ABC081: C - Not so Diverse](https://atcoder.jp/contests/abc081/tasks/arc086_a)
 
 ## 代表的な B レベル問題
+- [ABC155: B - Papers, Please](https://atcoder.jp/contests/abc155/tasks/abc155_b)
+- [ABC154: B - I miss you...](https://atcoder.jp/contests/abc154/tasks/abc154_b)
+- [ABC152: B - Comparing Strings](https://atcoder.jp/contests/abc152/tasks/abc152_b)
+- [ABC148: B - Strings with the Same Length](https://atcoder.jp/contests/abc148/tasks/abc148_b)
+- [ABC146: B - ROT N](https://atcoder.jp/contests/abc146/tasks/abc146_b)
+- [ABC1: B - ]()
 - [ABC065: B - Trained?](https://atcoder.jp/contests/abc065/tasks/abc065_b)
 - [ABC060: B - Choose Integers](https://atcoder.jp/contests/abc060/tasks/abc060_b)
 - [ABC048: B - Between a and b ...](https://atcoder.jp/contests/abc048/tasks/abc048_b)
@@ -60,8 +66,10 @@
 - [ABC106: B - 105](https://atcoder.jp/contests/abc106/tasks/abc106_b)
 - [ABC136: B - Uneven Numbers](https://atcoder.jp/contests/abc136/tasks/abc136_b)
 - [ABC122: B - ATCoder](https://atcoder.jp/contests/abc122/tasks/abc122_b)
+- [ABC151: B - ](https://atcoder.jp/contests/abc151/tasks/abc151_b)
 - [ABC150: B - Count ABC](https://atcoder.jp/contests/abc150/tasks/abc150_b)
 - [ABC144: B - 81](https://atcoder.jp/contests/abc144/tasks/abc144_b)
+- [ABC143: B - TAKOYAKI FESTIVAL 2019](https://atcoder.jp/contests/abc143/tasks/abc143_b)
 - [ABC051: B - Sum of Three Integers](https://atcoder.jp/contests/abc051/tasks/abc051_b)
 - [ARC004: A - 2点間距離の最大値](https://atcoder.jp/contests/arc004/tasks/arc004_1)
 - [ABC105: B - Cakes and Donuts](https://atcoder.jp/contests/abc105/tasks/abc105_b)
