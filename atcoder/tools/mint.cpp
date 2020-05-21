@@ -8,7 +8,7 @@ const int mod = 998244353;
 struct mint {
     long long x;
     mint(long long x = 0): x((x % mod + mod) % mod) {}
-    mint operator-() const return mint(-x);
+    mint operator-() { const return mint(-x); }
     mint& operator+=(const mint a) {
         if ((x += a.x) >= mod) x -= mod;
         return *this;
@@ -21,9 +21,9 @@ struct mint {
         (x *= a.x) %= mod;
         return *this;
     }
-    mint operator+(const mint a) const return mint(*this) += a;
-    mint operator-(const mint a) const return mint(*this) -= a;
-    mint operator*(const mint a) const return mint(*this) *= a;
+    mint operator+(const mint a) const { return mint(*this) += a; }
+    mint operator-(const mint a) const { return mint(*this) -= a; }
+    mint operator*(const mint a) const { return mint(*this) *= a; }
     mint pow(long long t) const {
         if (!t) return 1;
         mint a = pow(t >> 1);
