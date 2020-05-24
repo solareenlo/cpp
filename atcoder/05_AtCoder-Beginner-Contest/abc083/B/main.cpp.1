@@ -4,14 +4,17 @@ using namespace std;
 
 void solve(long long N, long long A, long long B){
     int ans = 0;
+
     REP(i, N + 1) {
-        string tmp = to_string(i);
+        if (i == 0) continue ;
+        string num = to_string(i);
         int sum = 0;
-        REP(j, tmp.size())
-            sum += tmp[j] - '0';
+        REP(j, num.size())
+            sum += num[j] - '0';
         if (sum >= A && sum <= B)
             ans += i;
     }
+
     cout << ans << '\n';
 }
 
