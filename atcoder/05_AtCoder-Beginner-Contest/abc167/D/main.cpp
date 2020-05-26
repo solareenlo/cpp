@@ -1,26 +1,40 @@
 #include <iostream>
-#include <map>
-#include <set>
 #include <vector>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-
-
-void solve(long long N, long long K, std::vector<long long> A){
-
-}
+using ll = long long;
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long K;
-    scanf("%lld",&K);
-    std::vector<long long> A(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&A[i]);
+
+    int n;
+    ll k;
+    cin >> n >> k;
+
+    vector<int> a(n, 0);
+    REP(i, n) cin >> a[i]; // 全部の道順
+
+    vector<int> s; // tail + loop 個内の街における次へのワープ場所
+    vector<int> road(n + 1, -1); // 自分までの街の個数
+    int tail = 0; // ループに入るまでの街の個数
+    int period = 1; // ループの中の街の個数
+
+    int v = 1;
+    // -1 はまだ自分までの街の個数を数えていない
+    while (road[v] == -1) {
+        road[v] = s.size();
+        s.push_back(v);
+        v = a[v - 1];
     }
-    solve(N, K, std::move(A));
+    period = s.size() - road[v]; // ループの中の街の個数
+    tail = road[v]; // ループに入るまでの街の個数
+
+    if (k < tail) cout << s[k] << '\n';
+    else {
+        k -= tail;
+        k %= period;
+        cout << s[tail + k] << '\n';
+    }
     return 0;
 }
