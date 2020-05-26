@@ -1,24 +1,21 @@
 #include <iostream>
-#include <map>
-#include <set>
-#include <vector>
-#define REP(i, n) for (int i = 0; i < (n); i++)
+#include <cmath>
 using namespace std;
-
-
-void solve(long long A, long long B, long long N){
-
-}
+using ll = long long;
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long A;
-    scanf("%lld",&A);
-    long long B;
-    scanf("%lld",&B);
-    long long N;
-    scanf("%lld",&N);
-    solve(A, B, N);
+
+    ll a, b, n;
+    cin >> a >> b >> n;
+
+    ll x;
+    if(n < b - 1) x = n;
+    else x = b - 1;
+
+    ll ans = floor(a * (x % b) / b);
+
+    cout << ans << '\n';
     return 0;
 }
