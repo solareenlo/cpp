@@ -4,15 +4,15 @@
 using namespace std;
 const int INF = 1 << 30;
 
-int main() {
+int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
 
     int n, m, x;
     cin >> n >> m >> x;
 
-    vector<int> c(n, 0);
     vector<vector<int> > a(n, vector<int>(m, 0));
+    vector<int> c(n, 0);
     REP(i, n) {
         cin >> c[i];
         REP(j, m) cin >> a[i][j];
@@ -29,11 +29,13 @@ int main() {
             }
         }
         bool ok = true;
-        REP(j, m) if (level[j] < x) ok = false;
+        REP(j, m)
+            if (level[j] < x) ok = false;
         if (ok) ans = min(ans, cost);
     }
 
-    if (ans == INF) cout << -1 << '\n';
+    if (ans == INF) cout << -1 << endl;
     else cout << ans << '\n';
+
     return 0;
 }

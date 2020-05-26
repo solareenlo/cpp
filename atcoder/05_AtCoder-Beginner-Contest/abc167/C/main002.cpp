@@ -15,7 +15,8 @@ int main() {
     vector<vector<int> > a(n, vector<int>(m, 0));
     REP(i, n) {
         cin >> c[i];
-        REP(j, m) cin >> a[i][j];
+        REP(j, m)
+            cin >> a[i][j];
     }
 
     int ans = INF;
