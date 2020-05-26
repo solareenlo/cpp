@@ -1,26 +1,22 @@
 #include <iostream>
-#include <map>
-#include <set>
-#include <vector>
-#define REP(i, n) for (int i = 0; i < (n); i++)
+#include <cmath>
 using namespace std;
-
-
-void solve(long long A, long long B, long long H, long long M){
-
-}
+const double PI = acos(-1);
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long A;
-    scanf("%lld",&A);
-    long long B;
-    scanf("%lld",&B);
-    long long H;
-    scanf("%lld",&H);
-    long long M;
-    scanf("%lld",&M);
-    solve(A, B, H, M);
+
+    int a, b, h, m;
+    cin >> a >> b >> h >> m;
+
+    double th = double(h*60 + m) / 720 * 2*PI;
+    double tm = double(m) / 60 * 2*PI;
+    double xh = cos(th) * a;
+    double yh = sin(th) * a;
+    double xm = cos(tm) * b;
+    double ym = sin(tm) * b;
+    double dist = hypot(xh - xm, yh - ym);
+    printf("%.9f\n", dist);
     return 0;
 }

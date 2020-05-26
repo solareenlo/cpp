@@ -15,9 +15,8 @@ int main() {
     REP(i, m) {
         int a, b;
         cin >> a >> b;
-        a--, b--;
-        dp[a].push_back(b);
-        dp[b].push_back(a);
+        dp[a-1].push_back(b-1);
+        dp[b-1].push_back(a-1);
     }
 
     vector<int> dist(n, -1);
@@ -27,10 +26,10 @@ int main() {
     dist[0] = 0;
     q.push(0);
 
-    while (!q.empty()) {
+    while(!q.empty()) {
         int v = q.front();
         q.pop();
-        for (auto i : dp[v]) {
+        for (int i : dp[v]) {
             if (dist[i] != -1) continue ;
             dist[i] = dist[v] + 1;
             q.push(i);
@@ -41,7 +40,7 @@ int main() {
     cout << "Yes" << '\n';
     REP(i, n) {
         if (i == 0) continue ;
-        cout << pre[i] + 1 << '\n';
+        cout  << pre[i] + 1<< '\n';
     }
     return 0;
 }

@@ -4,7 +4,7 @@
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
-int main() {
+int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
 
@@ -15,22 +15,23 @@ int main() {
     REP(i, m) {
         int a, b;
         cin >> a >> b;
-        a--, b--;
+        --a;
+        --b;
         dp[a].push_back(b);
         dp[b].push_back(a);
     }
 
-    vector<int> dist(n, -1);
     queue<int> q;
+    vector<int> dist(n, -1);
     vector<int> pre(n, -1);
 
-    dist[0] = 0;
     q.push(0);
+    dist[0] = 0;
 
     while (!q.empty()) {
         int v = q.front();
         q.pop();
-        for (auto i : dp[v]) {
+        for (int i : dp[v]) {
             if (dist[i] != -1) continue ;
             dist[i] = dist[v] + 1;
             q.push(i);
@@ -39,9 +40,7 @@ int main() {
     }
 
     cout << "Yes" << '\n';
-    REP(i, n) {
-        if (i == 0) continue ;
+    for (int i = 1; i < n; i++)
         cout << pre[i] + 1 << '\n';
-    }
     return 0;
 }
