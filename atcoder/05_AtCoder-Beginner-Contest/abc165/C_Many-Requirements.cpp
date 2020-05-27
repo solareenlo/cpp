@@ -1,4 +1,5 @@
-#include "bits/stdc++.h"
+#include <iostream>
+#include <vector>
 using namespace std;
 
 void makeCombiUtil(vector<vector<int> > &ans, vector<int> &tmp, int n, int left, int k) {
