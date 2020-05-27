@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-inline int gcd(int a, int b) {
+template<class T> inline T gcd(T a, T b) {
     if (b == 0) return a;
     return  gcd(b, a % b);
 }
 
-inline int lcm(int a, int b) {
+template<class T> inline T lcm(T a, T b) {
     return a * b / gcd(a, b);
 }
