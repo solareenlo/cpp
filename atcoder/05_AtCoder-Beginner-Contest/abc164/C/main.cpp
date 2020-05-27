@@ -1,24 +1,21 @@
 #include <iostream>
-#include <map>
 #include <set>
-#include <vector>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-
-
-void solve(long long N, std::vector<std::string> S){
-
-}
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<std::string> S(N);
-    for(int i = 0 ; i < N ; i++){
-        std::cin >> S[i];
+
+    int n;
+    cin >> n;
+    set<string> flute;
+    REP(i, n) {
+        string tmp;
+        cin >> tmp;
+        flute.insert(tmp);
     }
-    solve(N, std::move(S));
+
+    cout << flute.size() << '\n';
     return 0;
 }
