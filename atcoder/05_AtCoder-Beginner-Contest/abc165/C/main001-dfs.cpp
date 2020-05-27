@@ -1,3 +1,5 @@
+// とりうる組合せを深さ優先探索で全探索して，
+// 条件に合致する組合せを数えてる
 #include <iostream>
 #include <vector>
 #define REP(i, n) for (int i = 0; i < (n); i++)
