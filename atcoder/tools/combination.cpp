@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-long long comb(long long n, long long r) {
+template<class T> T comb(T n, T r) {
     if (r * 2 > n) r = n - r;
-    long long dividend = 1;
-    long long divisor = 1;
-    for (long long i = 1; i <= r; i++ ) {
+    T dividend = 1;
+    T divisor = 1;
+    for (T i = 1; i <= r; i++ ) {
         dividend *= (n - i + 1);
         divisor *= i;
     }
