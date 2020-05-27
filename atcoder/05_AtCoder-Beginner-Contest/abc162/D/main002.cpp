@@ -10,7 +10,7 @@ int main() {
     int n; cin >> n;
     string s; cin >> s;
 
-    vector<int> a(n, 0);
+    vector<int> a(n);
     REP(i, n) a[i] = s[i] % 3;
 
     vector<int> count(3, 0);
@@ -20,7 +20,7 @@ int main() {
     REP(i, 3) ans *= count[i];
 
     REP(j, n) REP(i, j) {
-        int k = j + j - i;
+        int k = j + (j - i);
         if (k < n) {
             if (a[i] == a[j]) continue ;
             if (a[j] == a[k]) continue ;
