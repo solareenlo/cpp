@@ -1,24 +1,25 @@
 #include <iostream>
 #include <map>
-#include <set>
-#include <vector>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-
-
-void solve(long long N, std::vector<long long> A){
-
-}
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<long long> A(N-2+1);
-    for(int i = 0 ; i < N-2+1 ; i++){
-        scanf("%lld",&A[i]);
+    int n;
+    cin >> n;
+
+    map<int, int> m;
+    REP(i, n) m.insert(make_pair(i, 0));
+
+    REP(i, n - 1) {
+        int tmp;
+        cin >> tmp;
+        --tmp;
+        m[tmp]++;
     }
-    solve(N, std::move(A));
+
+    REP(i, n)
+        cout << m[i] << '\n';
     return 0;
 }
