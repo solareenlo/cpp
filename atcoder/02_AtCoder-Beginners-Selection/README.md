@@ -65,7 +65,7 @@
 - [ABC106: B - 105](https://atcoder.jp/contests/abc106/tasks/abc106_b)
 - [ABC136: B - Uneven Numbers](https://atcoder.jp/contests/abc136/tasks/abc136_b)
 - [ABC122: B - ATCoder](https://atcoder.jp/contests/abc122/tasks/abc122_b)
-- [ABC151: B - ](https://atcoder.jp/contests/abc151/tasks/abc151_b)
+- [ABC151: B - Achieve the Goal](https://atcoder.jp/contests/abc151/tasks/abc151_b)
 - [ABC150: B - Count ABC](https://atcoder.jp/contests/abc150/tasks/abc150_b)
 - [ABC144: B - 81](https://atcoder.jp/contests/abc144/tasks/abc144_b)
 - [ABC143: B - TAKOYAKI FESTIVAL 2019](https://atcoder.jp/contests/abc143/tasks/abc143_b)
