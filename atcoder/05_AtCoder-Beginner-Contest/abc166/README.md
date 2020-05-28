@@ -1,7 +1,11 @@
 # [AtCoder Beginner Contest 166](https://atcoder.jp/contests/abc166/tasks)
-## [D: I hate Factorization](https://atcoder.jp/contests/abc166/tasks/abc166_d)
-- 求める答えの範囲に目星をつけて，全探索を行えば良い．
-- https://www.wolframalpha.com/ で数式のグラフを描写して，おおよその答えの範囲を探れば良い．
+
+## [F: Three Variables Game](https://atcoder.jp/contests/abc166/tasks/abc166_f)
+- `std::endl` は遅いので，`'\n'` を使う．
+- ジェネリックラムダを使用しているので，`-std=c++14` オプションを付与する．
+    ```bash
+    g++ -std=c++14 F_Three-Variables-Game.cpp
+    ```
 
 ## [E: This Message Will Self-Destruct in 5s](https://atcoder.jp/contests/abc166/tasks/abc166_e)
 - `for` 2回回すよりも連想配列を使うと計算が高速になる．
@@ -10,9 +14,6 @@
     - ここでは具体的には `j - i = A_i + A_j` → `i + A_i = j + A_j`
 - 求める答えの範囲は `int` の範囲を超えるので `long long` を使用する．
 
-## [F: Three Variables Game](https://atcoder.jp/contests/abc166/tasks/abc166_f)
-- `std::endl` は遅いので，`'\n'` を使う．
-- ジェネリックラムダを使用しているので，`-std=c++14` オプションを付与する．
-    ```bash
-    g++ -std=c++14 F_Three-Variables-Game.cpp
-    ```
+## [D: I hate Factorization](https://atcoder.jp/contests/abc166/tasks/abc166_d)
+- 求める答えの範囲に目星をつけて，全探索を行えば良い．
+- https://www.wolframalpha.com/ で数式のグラフを描写して，おおよその答えの範囲を探れば良い．
