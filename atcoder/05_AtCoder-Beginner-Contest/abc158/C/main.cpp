@@ -1,22 +1,23 @@
 #include <iostream>
-#include <map>
-#include <set>
-#include <vector>
-#define REP(i, n) for (int i = 0; i < (n); i++)
+#include <cmath>
 using namespace std;
-
-
-void solve(long long A, long long B){
-
-}
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long A;
-    scanf("%lld",&A);
-    long long B;
-    scanf("%lld",&B);
-    solve(A, B);
+
+    int a, b;
+    cin >> a >> b;
+
+    int ans = -100;
+    for (int i = 10 * b; i < 10 * (b + 1); i++) {
+        if (floor(i * 0.08) == a) {
+            ans = i;
+            break ;
+        }
+    }
+
+    if (ans == -100) cout << -1 << '\n';
+    else cout << ans << '\n';
     return 0;
 }
