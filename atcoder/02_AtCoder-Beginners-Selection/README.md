@@ -40,7 +40,6 @@
 - [ABC152: B - Comparing Strings](https://atcoder.jp/contests/abc152/tasks/abc152_b)
 - [ABC148: B - Strings with the Same Length](https://atcoder.jp/contests/abc148/tasks/abc148_b)
 - [ABC146: B - ROT N](https://atcoder.jp/contests/abc146/tasks/abc146_b)
-- [ABC1: B - ]()
 - [ABC065: B - Trained?](https://atcoder.jp/contests/abc065/tasks/abc065_b)
 - [ABC060: B - Choose Integers](https://atcoder.jp/contests/abc060/tasks/abc060_b)
 - [ABC048: B - Between a and b ...](https://atcoder.jp/contests/abc048/tasks/abc048_b)
