@@ -12,6 +12,7 @@ int main() {
     REP(i, m) cin >> s[i] >> c[i];
 
     REP(i, 1000) {
+        // (a) 候補の数字を一文字ずつ vector d に入れてる
         int x = i / 10;
         vector<int> d(1, i % 10);
         while (x) {
@@ -19,16 +20,17 @@ int main() {
             x /= 10;
         }
         reverse(d.begin(), d.end());
+        // (a) ここまで
         if (d.size() != n) continue ;
 
         bool ok = true;
         REP(i, m) if (d[s[i] - 1] != c[i]) ok = false;
         if (ok) {
-            cout << i << endl;
+            cout << i << '\n';
             return 0;
         }
     }
 
-    cout << -1 << endl;
+    cout << -1 << '\n';
     return 0;
 }

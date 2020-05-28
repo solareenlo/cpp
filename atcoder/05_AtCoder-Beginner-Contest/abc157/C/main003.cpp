@@ -24,11 +24,10 @@ int main() {
         bool ok = true;
         REP(i, m) if (d[s[i] - 1] != c[i]) ok = false;
         if (ok) {
-            cout << i << endl;
+            cout << i << '\n';
             return 0;
         }
     }
-
     cout << -1 << endl;
     return 0;
 }
