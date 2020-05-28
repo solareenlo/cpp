@@ -2,8 +2,9 @@
 #include <vector>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
+using ll = long long;
 
-long long nC2(long long n) {
+ll nC2(ll n) {
     return n * (n - 1) / 2;
 }
 
@@ -21,13 +22,15 @@ int main() {
     vector<int> count(n);
     REP(i, n) count[a[i]]++;
 
-    long long total = 0;
+    ll total = 0;
     REP(i, n) total += nC2(count[i]);
 
     REP(i, n) {
-        long long ans = total;
+        ll ans = total;
         ans -= nC2(count[a[i]]);
-        ans += nC2(count[a[i]] - 1);
+        count[a[i]]--;
+        ans += nC2(count[a[i]]);
+        count[a[i]]++;
         cout << ans << '\n';
     }
     return 0;
