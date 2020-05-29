@@ -1,6 +1,13 @@
 # [Educational DP Contest](https://atcoder.jp/contests/dp/tasks)
 - Dinamic Programming の練習を目的とした有志コンテストを解いたリポジトリ．
 
+## [D - Knapsack 1](https://atcoder.jp/contests/dp/tasks/dp_d) と [E - Knapsack 2](https://atcoder.jp/contests/dp/tasks/dp_e) の違い
+- D は dp の表の縦軸に品物の個数，横軸に重さの合計，表の中には価値の最大値が入る．
+    - 重さ <= 10^5, 価値 <= 10^9
+- E は dp の表の縦軸に品物の個数，横軸に価値の合計，表の中には重さの最大値が入る．
+    - 重さ <= 10^9, 価値 <= 10^3 * 10^2
+- 条件は重さの合計が W 以下でなければならない．
+
 ## 解法例
 問題: [N - Slimes](https://atcoder.jp/contests/dp/tasks/dp_n)
 解法: [N - Slimes 解説 (Educational DP Contest / DP まとめコンテスト)](https://algo-logic.info/educational-dp-contest-n/)

@@ -12,8 +12,11 @@ int main() {
     vector<int> w(N), v(N);
     REP(i, N) cin >> w[i] >> v[i];
 
+    // この dp には価値の合計が入る
     vector<vector<ll> > dp(N + 1, vector<ll>(W + 1, 0));
 
+    // 縦軸に品物の数
+    // 横軸にナップザックの容量
     REP(i, N) REP(j, W + 1) {
         if (j - w[i] >= 0)
             dp[i + 1][j] = max(dp[i + 1][j], dp[i][j - w[i]] + v[i]);
