@@ -1,6 +1,6 @@
 #include <iostream>
 #include <queue>
-#include <queue>
+#include <vector>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
@@ -15,11 +15,11 @@ int main() {
     REP(i, n) cin >> p[i];
 
     vector<double> ex(n);
-    REP(i, n) ex[i] = (1.0 + p[i]) / 2.0;
+    REP(i,n ) ex[i] = (p[i] + 1) / 2.0;
 
-    queue<double> q;
     double maxi = 0.0;
     double sum = 0.0;
+    queue<double> q;
     REP(i, n) {
         sum += ex[i];
         q.push(ex[i]);
