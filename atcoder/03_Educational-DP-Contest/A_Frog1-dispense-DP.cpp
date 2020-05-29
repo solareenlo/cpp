@@ -1,4 +1,5 @@
-#include "bits/stdc++.h"
+#include <iostream>
+#include <cmath>
 using namespace std;
 
 // a より b の方が小さかったら，a の値を b の値に置き換える (そして true を返す)
