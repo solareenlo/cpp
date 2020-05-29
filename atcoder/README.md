@@ -49,6 +49,9 @@
 - [cin, cout は遅いのでそれぞれ違う書き方をする](https://qiita.com/blackcurrant/items/312ea2471900132fbd6a)
 - [競プロで使える高速化テクニック](https://xuzijian629.hatenablog.com/entry/2019/03/31/130708)
 
+### <bits/stdc++.h>
+- [gcc/libstdc++-v3/include/precompiled/stdc++.h](https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/include/precompiled/stdc%2B%2B.h)
+
 ### 2020/05/31 の社長のぶっちゃけトークまとめ
 - 企業コンテストだから問題が違うということはない．変わるレートの範囲が違うだけ．
 - 実技検定は3回分のコンテストを一度に行って，一気にレートを付けようとする仕組み．
