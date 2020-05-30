@@ -1,41 +1,38 @@
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <numeric>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
-#define ALL(vec) (vec).begin(), (vec).end()
-#define SUM(...) accumulate(ALL(__VA_ARGS__),0LL)
-#define DSUM(...) accumulate(ALL(__VA_ARGS__),0.0)
 using namespace std;
 using ll = long long;
-using P = pair<int, int>;
 
-// 便利関数
-template <class T> inline bool chmin(T &a, T b) {if (a > b){a = b;return true;}return false;}
-template <class T> inline bool chmax(T &a, T b) {if (a < b){a = b;return true;}return false;}
-template<class T> inline auto max(const T& a){ return *max_element(ALL(a)); }
-template<class T> inline auto min(const T& a){ return *min_element(ALL(a)); }
-inline ll gcd(ll a,ll b){if(b == 0) return a;return  gcd(b,a%b);}
-inline ll lcm(ll a,ll b){ll g = gcd(a,b);return a / g * b;}
+template<class T> inline bool isPrime(T n) {
+    if (n < 2) return false;
+    else if (n == 2) return true;
+    else if (n % 2 == 0) return false;
 
-// 出力
-void print() { std::cout << '\n'; }
-template <class T>void print(const T &x) {std::cout << x <<'\n';}
-template <class T, class... Args>void print(const T &x, const Args &... args) {std::cout << x << " ";print(args...);}
-
-const int INF = 2002002002;
-
-void solve(long long N){
-
+    long double sqrtN = sqrt(n);
+    for (T i = 3; i <= sqrtN; i += 2)
+        if (n % i == 0) return false;
+    return true;
 }
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    solve(N);
+
+    ll n; cin >> n;
+
+    if (isPrime(n)) cout << n - 1 << '\n';
+    else {
+        ll mini = 1LL << 60;
+        ll num = 0;
+        for (ll i = 2; i <= sqrt(n); i++) {
+            if (n % i == 0) {
+                if (i + n / i < mini) {
+                    mini = min(mini, i + n / i);
+                    num = i;
+                }
+            }
+        }
+        cout << num + n / num - 2 << '\n';
+    }
     return 0;
 }
