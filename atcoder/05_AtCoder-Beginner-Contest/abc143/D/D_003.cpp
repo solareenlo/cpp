@@ -1,10 +1,14 @@
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
+using ll = long long;
 
 int main() {
-    int n; cin >> n;
+    cin.tie(0);
+    ios::sync_with_stdio(false);
 
+    int n;
+    cin >> n;
     vector<int> L(n);
     REP(i, n) cin >> L[i];
     sort(L.begin(), L.end());
@@ -17,6 +21,6 @@ int main() {
         ans += r - l;
     }
 
-    cout << ans << endl;
+    cout << ans << '\n';
     return 0;
 }
