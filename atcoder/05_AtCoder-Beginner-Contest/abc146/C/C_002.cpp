@@ -8,7 +8,7 @@ int main() {
     ios::sync_with_stdio(false);
 
     ll a, b, x;
-    cin >> a >> b >> x;
+    cin >> a >> b >>x;
 
     ll l = 0;
     ll r = 1000000001;
