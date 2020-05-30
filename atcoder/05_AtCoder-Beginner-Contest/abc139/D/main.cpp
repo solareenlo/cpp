@@ -1,20 +1,11 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
-#define REP(i, n) for (int i = 0; i < (n); i++)
+#include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
-
-void solve(long long N){
-
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    solve(N);
+int main() {
+    ll n;
+    cin >> n;
+    ll ans = n * (n - 1) / 2;
+    cout << ans << '\n';
     return 0;
 }
