@@ -13,6 +13,7 @@ int main() {
     vector<ll> w(N), v(N);
     REP(i, N) cin >> w[i] >> v[i];
 
+    // この dp には重さの最大値が入る
     vector<vector<ll> > dp(N + 1, vector<ll>(100001, 1LL << 60));
 
     dp[0][0] = 0;
