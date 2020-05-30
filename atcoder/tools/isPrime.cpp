@@ -7,14 +7,14 @@ template<class T> inline bool isPrime(T n) {
     else if (n == 2) return true;
     else if (n % 2 == 0) return false;
 
-    double sqrtN = sqrt(n);
-    for (int i = 3; i <= sqrtN; i += 2)
+    long double sqrtN = sqrt(n);
+    for (T i = 3; i <= sqrtN; i += 2)
         if (n % i == 0) return false;
     return true;
 }
 
 int main() {
-    int x;
+    long long x;
     cin >> x;
 
     bool ok = isPrime(x);
