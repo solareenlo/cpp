@@ -7,7 +7,8 @@ int main() {
     cin.tie(0);
     ios::sync_with_stdio(false);
 
-    int n; cin >> n;
+    int n;
+    cin >> n;
     map<string, int> m;
 
     ll ans = 0;
