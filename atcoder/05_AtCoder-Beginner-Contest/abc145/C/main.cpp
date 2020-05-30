@@ -1,26 +1,34 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-
-
-void solve(long long N, std::vector<long long> x, std::vector<long long> y){
-
-}
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<long long> x(N);
-    std::vector<long long> y(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&x[i]);
-        scanf("%lld",&y[i]);
+
+    int n; cin >> n;
+    vector<int> x(n), y(n);
+    REP(i, n) cin >> x[i] >> y[i];
+
+    vector<int> town;
+    REP(i, n) town.push_back(i);
+
+    int tmp = n;
+    int sum = 1;
+    while (tmp != 1) {
+        sum *= tmp;
+        tmp--;
     }
-    solve(N, std::move(x), std::move(y));
+
+    double dist = 0.0;
+    REP(i, sum) {
+        REP(j, n - 1)
+            dist += hypot(x[town[j]] - x[town[j + 1]], y[town[j]] - y[town[j + 1]]);
+        next_permutation(town.begin(), town.end());
+    }
+
+    dist /= sum;
+
+    printf("%.10f\n", dist);
     return 0;
 }
