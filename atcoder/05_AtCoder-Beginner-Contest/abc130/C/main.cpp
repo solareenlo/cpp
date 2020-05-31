@@ -1,26 +1,17 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
-#define REP(i, n) for (int i = 0; i < (n); i++)
+#include <bits/stdc++.h>
 using namespace std;
-
-
-void solve(long long W, long long H, long long x, long long y){
-
-}
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long W;
-    scanf("%lld",&W);
-    long long H;
-    scanf("%lld",&H);
-    long long x;
-    scanf("%lld",&x);
-    long long y;
-    scanf("%lld",&y);
-    solve(W, H, x, y);
+
+    double w, h;
+    cin >> w >> h;
+    double x, y;
+    cin >> x >> y;
+
+    double ans = w * h / 2;
+    if (x == w / 2 && y == h / 2) printf("%.10f 1\n", ans);
+    else printf("%.10f 0\n", ans);
     return 0;
 }
