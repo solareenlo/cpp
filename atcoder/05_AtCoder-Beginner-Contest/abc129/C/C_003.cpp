@@ -19,7 +19,7 @@ int main() {
     vector<ll> dp(n + 1, 0);
     dp[0] = 1;
     REP(now, n) {
-        for (int next = now + 1; next <= min(now + 2, n); next++) {
+        for (int next = now + 1; next <= min(n, now + 2); next++) {
             if (a[next]) {
                 dp[next] += dp[now];
                 dp[next] %= int(1e9 + 7);
