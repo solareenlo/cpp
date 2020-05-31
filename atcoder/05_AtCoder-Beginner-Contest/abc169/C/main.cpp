@@ -8,9 +8,13 @@ int main() {
 
     ll a;
     cin >> a;
-    long double b;
+    double b;
     cin >> b;
-    ll ans = a * b;
-    printf("%lld\n", ans);
+    // double から long long への cast は切り捨てが発生するので，0.5を足してる．
+    // 0.9999999999999 とかが 0 になっちゃう．
+    ll intB = b * 100 + 0.5;
+    a *= intB;
+    a /= 100;
+    printf("%lld\n", a);
     return 0;
 }
