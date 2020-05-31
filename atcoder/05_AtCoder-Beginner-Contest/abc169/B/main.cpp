@@ -19,7 +19,7 @@ int main() {
     Bint sum = 1;
     REP(i, n) {
         sum *= a[i];
-        if (sum > 1000000000000000000) {
+        if (sum > ll(1e18)) {
             sum = -1;
             break ;
         }
