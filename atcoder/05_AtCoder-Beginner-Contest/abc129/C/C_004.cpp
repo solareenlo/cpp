@@ -18,7 +18,6 @@ int main() {
 
     vector<ll> dp(n + 1, 0);
     dp[0] = 1;
-
     REP(now, n) {
         for (int next = now + 1; next <= min(now + 2, n); next++) {
             if (a[next]) {
