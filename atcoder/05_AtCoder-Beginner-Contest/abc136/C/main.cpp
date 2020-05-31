@@ -1,26 +1,28 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-
-const string YES = "Yes";
-const string NO = "No";
-
-void solve(long long N, std::vector<long long> H){
-
-}
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<long long> H(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&H[i]);
+
+    int n;
+    cin >> n;
+
+    vector<int> h(n);
+    REP(i, n) cin >> h[i];
+
+    bool ans = true;
+    int maxi = 0;
+    REP(i, n) {
+        if (maxi < h[i] - 1) maxi = h[i] - 1;
+        if (maxi > h[i]) {
+            ans = false;
+            break ;
+        }
     }
-    solve(N, std::move(H));
+
+    if (ans) cout << "Yes" << '\n';
+    else cout << "No" << '\n';
     return 0;
 }
