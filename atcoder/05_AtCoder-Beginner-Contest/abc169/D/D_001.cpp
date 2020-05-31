@@ -23,19 +23,17 @@ int main() {
 
     ll n;
     cin >> n;
-
-    auto pf = primeFactorize(n);
-
-    int count = 0;
-    for (auto i : pf) {
-        ll p = i.second;
-        ll b = 1;
-        while (b <= p) {
-            p -= b;
+    auto fs = primeFactorize(n);
+    int ans = 0;
+    for (auto p : fs) {
+        int x = p.second;
+        int b = 1;
+        while (b <= x) {
+            x -= b;
             b++;
-            count++;
+            ans++;
         }
     }
-    cout << count << '\n';
+    cout << ans << '\n';
     return 0;
 }
