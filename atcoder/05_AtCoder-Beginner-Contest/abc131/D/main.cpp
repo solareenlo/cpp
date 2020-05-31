@@ -1,28 +1,35 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-
-const string YES = "Yes";
-const string NO = "No";
-
-void solve(long long N, std::vector<long long> A, std::vector<long long> B){
-
-}
+using ll = long long;
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<long long> A(N);
-    std::vector<long long> B(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&A[i]);
-        scanf("%lld",&B[i]);
+
+    int n;
+    cin >> n;
+
+    vector<pair<ll, ll> > ab;
+    REP(i, n) {
+        ll a, b;
+        cin >> a >> b;
+        ab.push_back(make_pair(b, a));
     }
-    solve(N, std::move(A), std::move(B));
+
+    sort(ab.begin(), ab.end());
+
+    vector<ll> sum(n, 0);
+    REP(i, n) {
+        if (i == 0) sum[i] = ab[i].second;
+        else sum[i] = sum[i - 1] + ab[i].second;
+    }
+
+    bool ok = true;
+    REP(i, n)
+        if (ab[i].first < sum[i]) ok = false;
+
+    if (ok) cout << "Yes" << '\n';
+    else cout << "No" << '\n';
     return 0;
 }
