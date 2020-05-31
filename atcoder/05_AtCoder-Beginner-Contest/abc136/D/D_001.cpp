@@ -2,12 +2,15 @@
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
-int main() {
+int main(){
+    cin.tie(0);
+    ios::sync_with_stdio(false);
+
     string s;
     cin >> s;
     int n = s.size();
 
-    vector<int> ans(n, 0);
+    vector<int> ans(n);
 
     REP(z, 2) {
         int count = 0;
@@ -19,11 +22,12 @@ int main() {
                 count = 0;
             }
         }
+        // reverse して上記の R への操作を L にも行う
         reverse(ans.begin(), ans.end());
         reverse(s.begin(), s.end());
         REP(i, n) {
-            if (s[i] == 'R') s[i] = 'L';
-            else s[i] = 'R';
+            if (s[i] == 'L') s[i] = 'R';
+            else s[i] = 'L';
         }
     }
 
