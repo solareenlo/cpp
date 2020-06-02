@@ -1,28 +1,36 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-
-
-void solve(long long N, long long M, std::vector<long long> A, std::vector<long long> B){
-
-}
+using ll = long long;
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long M;
-    scanf("%lld",&M);
-    std::vector<long long> A(N);
-    std::vector<long long> B(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&A[i]);
-        scanf("%lld",&B[i]);
+
+    int n, m;
+    cin >> n >> m;
+    vector<pair<ll, ll> > drink(n);
+    REP(i, n) {
+        ll a, b;
+        cin >> a >> b;
+        drink[i] = make_pair(a, b);
     }
-    solve(N, M, std::move(A), std::move(B));
+
+    sort(drink.begin(), drink.end());
+
+    ll ans = 0;
+    int i = 0;
+    while(m > 0) {
+        if (drink[i].second <= m) {
+            ans += drink[i].first * drink[i].second;
+            m -= drink[i].second;
+        } else {
+            ans += m * drink[i].first;
+            break ;
+        }
+        i++;
+    }
+
+    cout << ans << '\n';
     return 0;
 }
