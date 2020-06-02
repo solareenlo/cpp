@@ -1,24 +1,28 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
-
-void solve(long long N, std::vector<long long> A){
-
+template<class T> inline T gcd(T a, T b) {
+    if (b == 0) return a;
+    return  gcd(b, a % b);
 }
 
-int main(){
+int main() {
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<long long> A(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&A[i]);
+
+    int n;
+    cin >> n;
+
+    int tmp;
+    cin >> tmp;
+    int g = gcd(tmp, tmp);
+    REP(i, n - 1) {
+        int tmp;
+        cin >> tmp;
+        g = gcd(g, tmp);
     }
-    solve(N, std::move(A));
+
+    cout << g << '\n';
     return 0;
 }
