@@ -1,26 +1,30 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-
-
-void solve(long long N, long long M, std::vector<long long> X){
-
-}
+using ll = long long;
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long M;
-    scanf("%lld",&M);
-    std::vector<long long> X(M);
-    for(int i = 0 ; i < M ; i++){
-        scanf("%lld",&X[i]);
+    int n, m;
+    cin >> n >> m;
+
+    vector<int> x(m);
+    REP(i, m) cin >> x[i];
+    sort(x.begin(), x.end());
+
+    if (n >= m) cout << 0 << '\n';
+    else {
+        vector<int> diff(m - 1, 0);
+        REP(i, m - 1)
+            diff[i] = abs(x[i] - x[i + 1]);
+        sort(diff.begin(), diff.end());
+
+        ll sum = 0;
+        REP(i, m - n)
+            sum += diff[i];
+
+        cout << sum << '\n';
     }
-    solve(N, M, std::move(X));
     return 0;
 }
