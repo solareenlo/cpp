@@ -16,14 +16,21 @@ int main(){
 
     vector<int> x(n);
     REP(i, n) cin >> x[i];
+    sort(x.begin(), x.end());
 
     if (n == 1) {
-        cout << abs(X - x[0]) << '\n';
+        cout << abs(x[0] - X) << '\n';
         return 0;
     }
 
-    int g = gcd(abs(X - x[0]), abs(X - x[0]));
-    REP(i, n) g = gcd(g, abs(X - x[i]));
+    vector<int> diff(n - 1);
+    REP(i, n - 1) diff[i] = x[i + 1] - x[i];
+
+    int g = gcd(diff[0], diff[0]);
+    REP(i, n)
+        g = gcd(g, diff[i]);
+
+    g = gcd(g, abs(X - x[0]));
 
     cout << g << '\n';
     return 0;
