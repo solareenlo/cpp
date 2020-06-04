@@ -1,28 +1,40 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
-const string YES = "Yes";
-const string NO = "No";
-
-void solve(long long H, long long W, std::vector<std::string> s){
-
-}
+const int dx[4] = {0, 1, 0, -1};
+const int dy[4] = {-1,0, 1,  0};
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long H;
-    scanf("%lld",&H);
-    long long W;
-    scanf("%lld",&W);
-    std::vector<std::string> s(W);
-    for(int i = 0 ; i < W ; i++){
-        std::cin >> s[i];
+
+    int h, w;
+    cin >> h >> w;
+
+    vector<vector<bool> > s(h, vector<bool>(w, false));
+    REP(i, h) REP(j, w) {
+        char tmp;
+        cin >> tmp;
+        if (tmp == '#')
+            s[i][j] = true;
     }
-    solve(H, W, std::move(s));
+
+    bool ans = true;
+    REP(i, h) REP(j, w) {
+        if (s[i][j]) {
+            int sum = 0;
+            REP(k, 4) {
+                if (i + dx[k] >= 0 && i + dx[k] < h)
+                    if (j + dy[k] >= 0 && j + dy[k] < w)
+                        if ((s[i + dx[k]][j + dy[k]]))
+                            sum++;
+            }
+            if (sum == 0) ans = false;
+        }
+    }
+
+    if (ans) cout << "Yes" << '\n';
+    else cout << "No" << '\n';
     return 0;
 }
