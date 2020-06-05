@@ -1,22 +1,22 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-
-
-void solve(long long X, long long Y){
-
-}
+using ll = long long;
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long X;
-    scanf("%lld",&X);
-    long long Y;
-    scanf("%lld",&Y);
-    solve(X, Y);
+
+    ll x, y;
+    cin >> x >> y;
+
+    int count = 0;
+    while(true) {
+        x *= 2;
+        count++;
+        if (x > y) break ;
+    }
+
+    cout << count << '\n';
     return 0;
 }
