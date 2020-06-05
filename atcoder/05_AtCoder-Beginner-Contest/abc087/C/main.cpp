@@ -1,26 +1,27 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-
-
-void solve(long long N, std::vector<std::vector<long long>> A){
-
-}
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<std::vector<long long>> A(2, std::vector<long long>(N));
-    for(int i = 0 ; i < 2 ; i++){
-        for(int j = 0 ; j < N ; j++){
-            scanf("%lld",&A[i][j]);
-        }
+
+    int n;
+    cin >> n;
+
+    vector<vector<int> > a(2, vector<int>(n, 0));
+    REP(i, 2) REP(j, n) cin >> a[i][j];
+
+    int maxi = 0;
+    REP(i, n) {
+        int sum = 0;
+        REP(j, n - i) // 1行目の前からの合計
+            sum += a[0][j];
+        REP(j, i + 1) // 2行目の後ろからの合計
+            sum += a[1][n - 1 - j];
+        maxi = max(maxi, sum);
     }
-    solve(N, std::move(A));
+
+    cout << maxi << '\n';
     return 0;
 }
