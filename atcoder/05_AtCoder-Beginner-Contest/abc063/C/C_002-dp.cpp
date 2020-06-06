@@ -15,11 +15,12 @@ int main() {
     vector<vector<bool> > dp(n + 1, vector<bool>(10001, false));
 
     dp[0][0] = true;
-
-    REP(i, n) REP(j, 10001) {
-        if (dp[i][j]) {
-            dp[i + 1][j] = true;
-            dp[i + 1][j + s[i]] = true;
+    REP(i, n) {
+        REP(j, 10001) {
+            if (dp[i][j]) {
+                dp[i + 1][j] = true;
+                dp[i + 1][j + s[i]] = true;
+            }
         }
     }
 
