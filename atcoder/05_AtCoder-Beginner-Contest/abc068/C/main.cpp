@@ -1,30 +1,32 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-
-const string YES = "POSSIBLE";
-const string NO = "IMPOSSIBLE";
-
-void solve(long long N, long long M, std::vector<long long> a, std::vector<long long> b){
-
-}
 
 int main(){
     cin.tie(0);
     ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long M;
-    scanf("%lld",&M);
-    std::vector<long long> a(M);
-    std::vector<long long> b(M);
-    for(int i = 0 ; i < M ; i++){
-        scanf("%lld",&a[i]);
-        scanf("%lld",&b[i]);
+
+    int n, m;
+    cin >> n >> m;
+
+    vector<vector<int> > bfs(n);
+    REP(i, m) {
+        int a, b;
+        cin >> a >> b;
+        bfs[a - 1].push_back(b - 1);
     }
-    solve(N, M, std::move(a), std::move(b));
+
+    bool ans = false;
+    REP(i, bfs[0].size()) {
+        REP(j, bfs[bfs[0][i]].size()) {
+            if (bfs[bfs[0][i]][j] == n - 1)
+                ans = true;
+            if (ans) break ;
+        }
+        if (ans) break ;
+    }
+
+    if (ans) cout << "POSSIBLE" << '\n';
+    else cout << "IMPOSSIBLE" << '\n';
     return 0;
 }
