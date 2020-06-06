@@ -5,6 +5,19 @@
 - https://kenkoooo.com/atcoder/#/table/solareenlo
 
 ## References
+### レートの色
+
+| レート範囲  | 色   |
+|-------------|------|
+| 1 - 399     | 灰色 |
+| 400 - 799   | 茶色 |
+| 800 - 1199  | 緑色 |
+| 1200 - 1599 | 水色 |
+| 1600 - 1999 | 青色 |
+| 2000 - 2399 | 黄色 |
+| 2400 - 2799 | 橙色 |
+| 2800 - 3199 | 赤色 |
+
 ### 便利ツール
 #### 過去問に対して自動で push したり，入出力例を自動で試してくれたりするツール
 - [kyuridenamida/atcoder-tools](https://github.com/kyuridenamida/atcoder-tools)
