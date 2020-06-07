@@ -9,7 +9,10 @@ void f(int rest, string s) {
             f(rest - 1, s + c);
 }
 
-int main() {
+int main(){
+    cin.tie(0);
+    ios::sync_with_stdio(false);
+
     int n;
     cin >> n;
 
