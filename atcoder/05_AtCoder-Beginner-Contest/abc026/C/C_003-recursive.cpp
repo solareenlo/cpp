@@ -6,12 +6,12 @@ vector<vector<int> > sub(20);
 
 int dfs(int id) {
     if (sub[id].size() == 0) return 1;
-    int maxP = 0;
     int minP = (int)1e9;
+    int maxP = 0;
     for (int i : sub[id]) {
         int p = dfs(i);
-        maxP = max(maxP, p);
         minP = min(minP, p);
+        maxP = max(maxP, p);
     }
     return maxP + minP + 1;
 }

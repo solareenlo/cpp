@@ -16,6 +16,7 @@ int dfs(int id) {
     return maxP + minP + 1;
 }
 
+
 int main() {
     int n;
     cin >> n;
