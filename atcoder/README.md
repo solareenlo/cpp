@@ -5,6 +5,23 @@
 - https://kenkoooo.com/atcoder/#/table/solareenlo
 
 ## References
+### ABC と AGC/ARC との違い from rng_58(問題の製作者)
+- ABC について
+    ```bash
+    ABC は競技というより教材という観点で選んでいて、今後上位を目指していく上でできるようになっておくべきことを入れているつもりです (目的が異なるので、問題の傾向や配点のつけ方にも違いを感じると思います)
+    ```
+    - https://twitter.com/rng_58/status/1269217415067389952
+- AGC/ARC について
+    ```bash
+    AGC/ARC はコンテスト中の考察力を問う競技を目指しているので、AGC と ARC の C 以降は、いかにオリジナリティがあるかという観点で選んでいます
+    ```
+    - https://twitter.com/rng_58/status/1269216993367871489
+
+### 2020年6月現在における最難関問題
+- [World Tour Finals 2019 Open Contest E - e](https://atcoder.jp/contests/wtf19-open/tasks/wtf19_e)
+- [AtCoder最難の伝説問題†World Tour Finals 2019(WTF2019)-E e†にトドメをさす！](https://qiita.com/ageprocpp/items/104c051b2ec2086f5a9b)
+- [Kazune Takahashi さんによる解答の方針](http://kazune-lab.net/contest/2019/02/24/wtf19-open/#e---e)
+
 ### レートの色
 
 | レート範囲  | 色   |
@@ -24,6 +41,7 @@
 
 ### ライブラリ
 #### 競プロ C++ 用のライブラリ
+- [kazunetakahashi/library](https://github.com/kazunetakahashi/library)
 - [atcoder-live/library](https://github.com/atcoder-live/library)
 - [ei1333/library](https://github.com/ei1333/library)
 
