@@ -11,7 +11,7 @@ int main() {
     vector<vector<int> > card(n, vector<int>(m, 1));
 
     REP(i, n) REP(j, m) {
-        REP(k, 9) {
+        REP(k, 4) {
             if (i + dx[k] >= 0 && i + dx[k] < n)
                 if (j + dy[k] >= 0 && j + dy[k] < m)
                     card[i][j] *= -1;
