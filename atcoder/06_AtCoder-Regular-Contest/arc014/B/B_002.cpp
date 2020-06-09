@@ -7,20 +7,21 @@ int main() {
 
     int n;
     cin >> n;
-    string s;
+
     map<string, bool> str;
+    string s;
     REP(i, n) {
-        string w;
-        cin >> w;
+        string tmp;
+        cin >> tmp;
         if (i != 0) {
-            if (w[0] != s[s.size() - 1] || str[w] == true) {
+            if (tmp[0] != s[s.size() - 1] || str[tmp] == true) {
                 if (i % 2) cout << "WIN" << '\n';
                 else cout << "LOSE" << '\n';
                 return 0;
             }
         }
-        str[w] = true;
-        s = w;
+        str[tmp] = true;
+        s = tmp;
     }
     cout << "DRAW" << '\n';
     return 0;
