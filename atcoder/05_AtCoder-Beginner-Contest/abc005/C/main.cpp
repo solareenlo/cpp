@@ -1,55 +1,39 @@
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <numeric>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
-#define ALL(vec) (vec).begin(), (vec).end()
-#define SUM(...) accumulate(ALL(__VA_ARGS__),0LL)
-#define DSUM(...) accumulate(ALL(__VA_ARGS__),0.0)
 using namespace std;
 using ll = long long;
-using P = pair<int, int>;
-
-// 便利関数
-template <class T> inline bool chmin(T &a, T b) {if (a > b){a = b;return true;}return false;}
-template <class T> inline bool chmax(T &a, T b) {if (a < b){a = b;return true;}return false;}
-template<class T> inline auto max(const T& a){ return *max_element(ALL(a)); }
-template<class T> inline auto min(const T& a){ return *min_element(ALL(a)); }
-inline ll gcd(ll a,ll b){if(b == 0) return a;return  gcd(b,a%b);}
-inline ll lcm(ll a,ll b){ll g = gcd(a,b);return a / g * b;}
-
-// 出力
-void print() { std::cout << '\n'; }
-template <class T>void print(const T &x) {std::cout << x <<'\n';}
-template <class T, class... Args>void print(const T &x, const Args &... args) {std::cout << x << " ";print(args...);}
-
-const int INF = 2002002002;
-const string YES = "yes";
-const string NO = "no";
-
-void solve(long long T, long long N, std::vector<long long> A, long long M, std::vector<long long> B){
-
-}
 
 int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long T;
-    scanf("%lld",&T);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<long long> A(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&A[i]);
+    cin.tie(0)->sync_with_stdio(false);
+
+    int t; cin >> t;
+
+    int n; cin >> n;
+    vector<int> a(n);
+    REP(i, n) cin >> a[i];
+
+    int m; cin >> m;
+    vector<int> b(m);
+    REP(i, m) cin >> b[i];
+
+    bool ok = true;
+
+    if (n < m) ok = false;
+    else {
+        int cnt = 0;
+        REP(i, m) {
+            REP(j, (int)a.size()) {
+                if (a[j] <= b[i] && a[j] + t >= b[i]) {
+                    cnt++;
+                    a.erase(a.begin() + j);
+                    break ;
+                }
+            }
+        }
+        if (cnt != m) ok = false;
     }
-    long long M;
-    scanf("%lld",&M);
-    std::vector<long long> B(M);
-    for(int i = 0 ; i < M ; i++){
-        scanf("%lld",&B[i]);
-    }
-    solve(T, N, std::move(A), M, std::move(B));
+
+    if (ok) cout << "yes" << '\n';
+    else cout << "no" << '\n';
     return 0;
 }
