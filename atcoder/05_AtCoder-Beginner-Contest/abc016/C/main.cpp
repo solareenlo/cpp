@@ -1,33 +1,36 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
-// 出力
-void print() { std::cout << '\n'; }
-template <class T>void print(const T &x) {std::cout << x <<'\n';}
-template <class T, class... Args>void print(const T &x, const Args &... args) {std::cout << x << " ";print(args...);}
+int main() {
+	cin.tie(0)->sync_with_stdio(false);
 
+	int n, m;
+	cin >> n >> m;
+	vector<int> a(m), b(m);
+	REP(i, m) {
+		int tmp1, tmp2;
+		cin >> tmp1 >> tmp2;
+		tmp1--, tmp2--;
+		a[i] = tmp1;
+		b[i] = tmp2;
+	}
 
-void solve(long long N, long long M, std::vector<long long> A, std::vector<long long> B){
+	// ワーシャルフロイド法を使って，最短距離が２のものを探す
+	vector<vector<int> > d(n, vector<int>(n, (int)1e9));
 
-}
+	REP(i, n) d[i][i] = 0;
+	REP(i, m) d[a[i]][b[i]] = d[b[i]][a[i]] = 1;
 
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long M;
-    scanf("%lld",&M);
-    std::vector<long long> A(M);
-    std::vector<long long> B(M);
-    for(int i = 0 ; i < M ; i++){
-        scanf("%lld",&A[i]);
-        scanf("%lld",&B[i]);
-    }
-    solve(N, M, std::move(A), std::move(B));
-    return 0;
+	// k が経由する点，i が始点，j が終点
+	REP(k, n) REP(i, n) REP(j, n)
+		d[i][j] = min(d[i][j], d[i][k] + d[k][j]);
+
+	REP(i, n) {
+		int cnt = 0;
+		REP(j, n)
+			if (d[i][j] == 2) cnt++;
+		cout << cnt << '\n';
+	}
+	return 0;
 }
