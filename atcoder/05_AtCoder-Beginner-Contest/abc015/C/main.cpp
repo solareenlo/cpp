@@ -1,33 +1,45 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
-// 出力
-void print() { std::cout << '\n'; }
-template <class T>void print(const T &x) {std::cout << x <<'\n';}
-template <class T, class... Args>void print(const T &x, const Args &... args) {std::cout << x << " ";print(args...);}
-
-
-void solve(long long N, long long K, std::vector<std::vector<long long>> T){
-
-}
-
 int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long K;
-    scanf("%lld",&K);
-    std::vector<std::vector<long long>> T(N, std::vector<long long>(K));
-    for(int i = 0 ; i < N ; i++){
-        for(int j = 0 ; j < K ; j++){
-            scanf("%lld",&T[i][j]);
-        }
-    }
-    solve(N, K, std::move(T));
+    cin.tie(0)->sync_with_stdio(false);
+
+	int n, k;
+	cin >> n >> k;
+	vector<vector<int> > t(n, vector<int>(k));
+	REP(i, n) REP(j, k) cin >> t[i][j];
+
+	bool ok = true;
+	int x;
+	if (n == 5) {
+		REP(i, k) REP(j, k) REP(l, k) REP(m, k) REP(n, k) {
+			x = t[0][i]^t[1][j]^t[2][l]^t[3][m]^t[4][n];
+			if (!x) ok = false;
+		}
+	} else if (n == 4) {
+		REP(i, k) REP(j, k) REP(l, k) REP(m, k) {
+			x = t[0][i]^t[1][j]^t[2][l]^t[3][m];
+			if (!x) ok = false;
+		}
+	} else if (n == 3) {
+		REP(i, k) REP(j, k) REP(l, k) {
+			x = t[0][i]^t[1][j]^t[2][l];
+			if (!x) ok = false;
+		}
+	} else if (n == 2) {
+		REP(i, k) REP(j, k) {
+			x = t[0][i]^t[1][j];
+			if (!x) ok = false;
+		}
+	} else if (n == 1) {
+		REP(i, k) {
+			x = t[0][i];
+			if (!x) ok = false;
+		}
+	}
+
+	if (ok) cout << "Nothing" << '\n';
+	else cout << "Found" << '\n';
     return 0;
 }
