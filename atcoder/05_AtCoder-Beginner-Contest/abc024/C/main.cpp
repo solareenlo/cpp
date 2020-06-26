@@ -1,41 +1,34 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
-// 出力
-void print() { std::cout << '\n'; }
-template <class T>void print(const T &x) {std::cout << x <<'\n';}
-template <class T, class... Args>void print(const T &x, const Args &... args) {std::cout << x << " ";print(args...);}
-
-
-void solve(long long N, long long D, long long K, std::vector<long long> L, std::vector<long long> R, std::vector<long long> S, std::vector<long long> T){
-
-}
-
 int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long D;
-    scanf("%lld",&D);
-    long long K;
-    scanf("%lld",&K);
-    std::vector<long long> L(D);
-    std::vector<long long> R(D);
-    for(int i = 0 ; i < D ; i++){
-        scanf("%lld",&L[i]);
-        scanf("%lld",&R[i]);
-    }
-    std::vector<long long> S(K);
-    std::vector<long long> T(K);
-    for(int i = 0 ; i < K ; i++){
-        scanf("%lld",&S[i]);
-        scanf("%lld",&T[i]);
-    }
-    solve(N, D, K, std::move(L), std::move(R), std::move(S), std::move(T));
+    cin.tie(0)->sync_with_stdio(false);
+
+	int n, d, k;
+	cin >> n >> d >> k;
+	vector<int> l(d), r(d);
+	REP(i, d) cin >> l[i] >> r[i];
+	vector<int> s(k), t(k);
+	REP(i, k) cin >> s[i] >> t[i];
+
+	REP(i, k) {
+		int ans = -1;
+		REP(j, d) {
+			if (s[i] >= l[j] && s[i] <= r[j]) {
+				if (t[i] >= l[j] && t[i] <= r[j])
+					s[i] = t[i];
+				else {
+					if (s[i] < t[i]) s[i] = r[j];
+					else s[i] = l[j];
+				}
+			}
+			if (s[i] == t[i]) {
+				ans = j + 1;
+				break ;
+			}
+		}
+		cout << ans << '\n';
+	}
     return 0;
 }
