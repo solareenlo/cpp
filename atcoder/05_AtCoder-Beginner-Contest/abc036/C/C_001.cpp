@@ -2,21 +2,24 @@
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
-int main() {
-	cin.tie(0)->sync_with_stdio(false);
+int main(){
+    cin.tie(0)->sync_with_stdio(false);
 
 	int n;
 	cin >> n;
 	vector<int> a(n);
-	map<int, int> m;
+	set<int> A;
 	REP(i, n) {
-		cin >> a[i];
-		m[a[i]]++;
+		int tmp;
+		cin >> tmp;
+		a[i] = tmp;
+		A.insert(tmp);
 	}
+	map<int, int> m;
 	int i = 0;
-	for (auto itr = m.begin(); itr != m.end(); itr++)
-		itr->second = i++;
+	for (auto x : A)
+		m[x] = i++;
 	REP(i, n)
 		cout << m[a[i]] << '\n';
-	return (0);
+    return 0;
 }
