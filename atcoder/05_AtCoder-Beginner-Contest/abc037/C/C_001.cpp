@@ -3,21 +3,25 @@
 using namespace std;
 using ll = long long;
 
-int main() {
-	cin.tie(0)->sync_with_stdio(false);
+int main(){
+    cin.tie(0)->sync_with_stdio(false);
 
 	int n, k;
 	cin >> n >> k;
 	vector<ll> a(n);
 	REP(i, n) cin >> a[i];
 
-	vector<ll> s(n + 1, 0);
-	REP(i, n) s[i + 1] = s[i] + a[i];
-
 	ll ans = 0;
-	REP(i, n)
-		if (i + n - k + 1 <= n)
-			ans += s[i + n - k + 1] - s[i];
+	REP(i, n) {
+		ll sum = 0;
+		if (i + n - k + 1 <= n) {
+			for (int j = i; j < n - k + 1 + i; j++) {
+				sum += a[j];
+			}
+		}
+		ans += sum;
+	}
+
 	cout << ans << '\n';
-	return 0;
+    return 0;
 }
