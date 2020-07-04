@@ -1,28 +1,47 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
-const string YES = "possible";
-const string NO = "impossible";
+const int dx[9] = {0, 1, 0,-1, 0, 1, 1,-1,-1};
+const int dy[9] = {-1,0, 1, 0, 0, 1,-1,-1, 1};
 
-void solve(long long H, long long W, std::vector<std::string> S){
+int main() {
+	cin.tie(0)->sync_with_stdio(false);
 
-}
+	int h, w;
+	cin >> h >> w;
+	vector<vector<char> > s(h, vector<char>(w, '.'));
+	REP(i, h) REP(j, w) cin >> s[i][j];
 
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long H;
-    scanf("%lld",&H);
-    long long W;
-    scanf("%lld",&W);
-    std::vector<std::string> S(H);
-    for(int i = 0 ; i < H ; i++){
-        std::cin >> S[i];
-    }
-    solve(H, W, std::move(S));
-    return 0;
+	vector<vector<char> > ans(h, vector<char>(w, '#'));
+	REP(i, h) REP(j ,w) {
+		if (s[i][j] == '.') {
+			REP(k, 9) {
+				if (i + dx[k] >= 0 && i + dx[k] < h)
+					if (j + dy[k] >= 0 && j + dy[k] < w)
+						ans[i + dx[k]][j + dy[k]] = '.';
+			}
+		}
+	}
+
+	vector<vector<char> > verify(h, vector<char>(w, '.'));
+	REP(i, h) REP(j ,w) {
+		if (ans[i][j] == '#') {
+			REP(k, 9) {
+				if (i + dx[k] >= 0 && i + dx[k] < h)
+					if (j + dy[k] >= 0 && j + dy[k] < w)
+						verify[i + dx[k]][j + dy[k]] = '#';
+			}
+		}
+	}
+
+	if (s == verify) {
+		cout << "possible" << '\n';
+		REP(i, h) {
+			REP(j, w)
+				cout << ans[i][j];
+			cout << '\n';
+		}
+	} else cout << "impossible" << '\n';
+	return 0;
 }
