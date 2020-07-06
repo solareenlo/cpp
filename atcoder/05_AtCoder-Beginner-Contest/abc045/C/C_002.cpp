@@ -12,13 +12,14 @@ int main() {
 
 	ll res = 0;
 	REP(bit, 1 << (n - 1)) {
-		string tmp;
+		ll tmp = 0;
 		REP(i, n) {
-			tmp += s[i];
-			if (!(bit & (1 << i))) {
-					res += stol(tmp);
-					tmp = "";
-			}
+			tmp += s[i] - '0';
+			if ((bit >> i) & 1 || i == n - 1) {
+				res += tmp;
+				tmp = 0;
+			} else
+				tmp *= 10;
 		}
 	}
 
