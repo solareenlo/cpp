@@ -15,10 +15,16 @@ atcoder-tools test
 atcoder-tools submit
 ```
 
-## 解答一覧
+## テクニック 一覧
+
 |Contest|A|B|C|D|E|F|
 |---|---|---|---|---|---|---|
-|[ABC168](https://github.com/solareenlo/cpp/tree/master/atcoder/05_AtCoder-Beginner-Contest/ABC168)|[A: ∴ (Therefore)](https://atcoder.jp/contests/abc168/tasks/abc168_a)<br>[Answer](https://github.com/solareenlo/cpp/blob/master/atcoder/05_AtCoder-Beginner-Contest/ABC168/A.cpp)|[B: ... (Triple Dots)](https://atcoder.jp/contests/abc168/tasks/abc168_b)<br>[Answer](https://github.com/solareenlo/cpp/blob/master/atcoder/05_AtCoder-Beginner-Contest/ABC168/B.cpp)|[C: : (Colon)](https://atcoder.jp/contests/abc168/tasks/abc168_c)<br>[Answer](https://github.com/solareenlo/cpp/blob/master/atcoder/05_AtCoder-Beginner-Contest/ABC168/C_Example.cpp)|[D: .. (Double Dots)](https://atcoder.jp/contests/abc168/tasks/abc168_d)<br>[Answer](https://github.com/solareenlo/cpp/blob/master/atcoder/05_AtCoder-Beginner-Contest/ABC168/D_005.cpp)|[E: ∙ (Bullet)](https://atcoder.jp/contests/abc168/tasks/abc168_e)<br>[Answer](https://github.com/solareenlo/cpp/blob/master/atcoder/05_AtCoder-Beginner-Contest/ABC168/E_Example.cpp)|[F: . (Single Dot)](https://atcoder.jp/contests/abc168/tasks/abc168_f)<br>[Answer](https://github.com/solareenlo/cpp/blob/master/atcoder/05_AtCoder-Beginner-Contest/ABC168/F_Example.cpp)|
+|ABC173|A: |B: |C: |D: |E: |F: |
+|ABC172|A: |B: |C: |D: |E: |F: |
+|ABC171|A: |B: |C: |D: |E: |F: |
+|ABC170|A: |B: |C: |D: |E: |F: |
+|ABC169|A: |B: |C: |D: |E: |F: |
+|ABC168|A: |B: |C: |D: |E: |F: |
 |ABC167|A: |B: |C: |D: |E: |F: |
 |ABC166|A: |B: |C: |D: |E: |F: |
 |ABC165|A: |B: |C: |D: |E: |F: |
@@ -103,10 +109,10 @@ atcoder-tools submit
 |ABC086|A: |B: |C: |D: |||
 |ABC085|A: |B: |C: |D: |||
 |ABC084|A: |B: |C: |D: |||
-|[ABC083](https://github.com/solareenlo/cpp/tree/master/atcoder/05_AtCoder-Beginner-Contest/abc083)|[A: Libra](https://atcoder.jp/contests/abc083/tasks/abc083_a)<br>[Answer](https://github.com/solareenlo/cpp/blob/master/atcoder/05_AtCoder-Beginner-Contest/abc083/A/main.cpp)|[B: Some Sums](https://atcoder.jp/contests/abc083/tasks/abc083_b)<br>[Answer](https://github.com/solareenlo/cpp/blob/master/atcoder/05_AtCoder-Beginner-Contest/abc083/B/main.cpp)|C: |D: |||
+|ABC083|A: |B: |C: |D: |||
 |ABC082|A: |B: |C: |D: |||
 |ABC081|A: |B: |C: |D: |||
-|ABC080|[A: Parking](https://atcoder.jp/contests/abc080/tasks/abc080_a)<br>[Answer](https://github.com/solareenlo/cpp/blob/master/atcoder/05_AtCoder-Beginner-Contest/abc080/A/main.cpp)|[B: Harshad Number](https://atcoder.jp/contests/abc080/tasks/abc080_b)<br>[Answer](https://github.com/solareenlo/cpp/blob/master/atcoder/05_AtCoder-Beginner-Contest/abc080/B/main.cpp)|C: |D: |||
+|ABC080|A: |B: |C: |D: |||
 |ABC079|A: |B: |C: |D: |||
 |ABC078|A: |B: |C: |D: |||
 |ABC077|A: |B: |C: |D: |||
@@ -141,7 +147,7 @@ atcoder-tools submit
 |ABC048|A: |B: |C: |D: |||
 |ABC047|A: |B: |C: |D: |||
 |ABC046|A: |B: |C: |D: |||
-|ABC045|A: |B: |C: |D: |||
+|ABC045|A: |B: |C: bit 全探索, bit 表示, 区切り文字, サブセット|D: |||
 |ABC044|A: |B: |C: |D: |||
 |ABC043|A: |B: |C: |D: |||
 |ABC042|A: |B: |C: |D: |||
