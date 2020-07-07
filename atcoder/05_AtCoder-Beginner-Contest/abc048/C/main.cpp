@@ -1,47 +1,31 @@
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <numeric>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
-#define ALL(vec) (vec).begin(), (vec).end()
-#define SUM(...) accumulate(ALL(__VA_ARGS__),0LL)
-#define DSUM(...) accumulate(ALL(__VA_ARGS__),0.0)
 using namespace std;
 using ll = long long;
-using P = pair<int, int>;
-
-// 便利関数
-template <class T> inline bool chmin(T &a, T b) {if (a > b){a = b;return true;}return false;}
-template <class T> inline bool chmax(T &a, T b) {if (a < b){a = b;return true;}return false;}
-template<class T> inline auto max(const T& a){ return *max_element(ALL(a)); }
-template<class T> inline auto min(const T& a){ return *min_element(ALL(a)); }
-inline ll gcd(ll a,ll b){if(b == 0) return a;return  gcd(b,a%b);}
-inline ll lcm(ll a,ll b){ll g = gcd(a,b);return a / g * b;}
-
-// 出力
-void print() { std::cout << '\n'; }
-template <class T>void print(const T &x) {std::cout << x <<'\n';}
-template <class T, class... Args>void print(const T &x, const Args &... args) {std::cout << x << " ";print(args...);}
-
-const int INF = 2002002002;
-
-void solve(long long N, long long x, std::vector<long long> a){
-
-}
 
 int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long x;
-    scanf("%lld",&x);
-    std::vector<long long> a(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&a[i]);
-    }
-    solve(N, x, std::move(a));
+    cin.tie(0)->sync_with_stdio(false);
+
+	int n;
+	cin >> n;
+	ll x;
+	cin >> x;
+	vector<ll> a(n);
+	REP(i, n) cin >> a[i];
+
+	ll res = 0;
+	REP(i, n - 1) {
+		ll tmp = (a[i] + a[i + 1]) - x;
+		if (tmp > 0) {
+			res += tmp;
+			ll diff = tmp - a[i + 1];
+			if (diff > 0) {
+				a[i + 1] = 0;
+				a[i] -= diff - a[i + 1];
+			} else a[i + 1] -= tmp;
+		}
+	}
+
+	cout << res << '\n';
     return 0;
 }
