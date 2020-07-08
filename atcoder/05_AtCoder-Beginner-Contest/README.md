@@ -143,7 +143,7 @@ atcoder-tools submit
 | ABC052  | A: | B: | C:                                      | D: |    |    |
 | ABC051  | A: | B: | C:                                      | D: |    |    |
 | ABC050  | A: | B: | C:                                      | D: |    |    |
-| ABC049  | A: | B: | C:                                      | D: |    |    |
+| ABC049  | A: | B: | C: 文字列操作                           | D: |    |    |
 | ABC048  | A: | B: | C: 貪欲法                               | D: |    |    |
 | ABC047  | A: | B: | C:                                      | D: |    |    |
 | ABC046  | A: | B: | C:                                      | D: |    |    |
