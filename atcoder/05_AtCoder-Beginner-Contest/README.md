@@ -141,7 +141,7 @@ atcoder-tools submit
 | ABC054  | A: | B: | C:                          | D: |    |    |
 | ABC053  | A: | B: | C:                          | D: |    |    |
 | ABC052  | A: | B: | C:                          | D: |    |    |
-| ABC051  | A: | B: | C:                          | D: |    |    |
+| ABC051  | A: | B: | C: パターン 発見            | D: |    |    |
 | ABC050  | A: | B: | C: パターン 発見            | D: |    |    |
 | ABC049  | A: | B: | C: 文字列操作               | D: |    |    |
 | ABC048  | A: | B: | C: 貪欲法                   | D: |    |    |

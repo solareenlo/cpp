@@ -1,26 +1,28 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
-
-void solve(long long sx, long long sy, long long tx, long long ty){
-
-}
-
 int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long sx;
-    scanf("%lld",&sx);
-    long long sy;
-    scanf("%lld",&sy);
-    long long tx;
-    scanf("%lld",&tx);
-    long long ty;
-    scanf("%lld",&ty);
-    solve(sx, sy, tx, ty);
+    cin.tie(0)->sync_with_stdio(false);
+
+	int sx, sy, tx, ty;
+	cin >> sx >> sy >> tx >> ty;
+
+	int dy = ty - sy;
+	int dx = tx - sx;
+
+	REP(i, dy) cout << 'U';
+	REP(i, dx) cout << 'R';
+	REP(i, dy) cout << 'D';
+	REP(i, dx) cout << 'L';
+	cout << 'L';
+	REP(i, dy + 1) cout << 'U';
+	REP(i, dx + 1) cout << 'R';
+	cout << 'D';
+	cout << 'R';
+	REP(i, dy + 1) cout << 'D';
+	REP(i, dx + 1) cout << 'L';
+	cout << 'U';
+	cout << '\n';
     return 0;
 }
