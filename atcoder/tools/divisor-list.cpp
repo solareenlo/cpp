@@ -4,9 +4,10 @@
 #include <set>
 using namespace std;
 
-set<int> divisorsList(int n) {
-    set<int> div;
-    for (int i = 1; i * i <= n; ++i) {
+template<class T>
+inline set<T> divisorsList(T n) {
+    set<T> div;
+    for (T i = 1; i * i <= n; ++i) {
         if (n % i == 0) {
             div.insert(i);
             if (i * i != n)
