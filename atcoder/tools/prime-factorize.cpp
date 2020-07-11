@@ -4,7 +4,8 @@
 using namespace std;
 using ll = long long;
 
-template<class T> inline vector<pair<T, T> > primeFactorize(T n) {
+template<class T>
+inline vector<pair<T, T> > primeFactorize(T n) {
     vector<pair<T, T> > res;
     for (T a = 2; a * a <= n; a++) {
         if (n % a != 0) continue ;
