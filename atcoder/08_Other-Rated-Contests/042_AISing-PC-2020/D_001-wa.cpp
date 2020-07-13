@@ -25,7 +25,7 @@ int main() {
 		string t = X;
 		if (X[i] == '0') t[i] = '1';
 		else t[i] = '0';
-		uint64_t x = stol(t, nullptr, 2);
+		uint64_t x = stoull(t, nullptr, 2);
 		ll cnt = 0;
 		while (x) {
 			uint64_t cnt1 = popcnt(x);
