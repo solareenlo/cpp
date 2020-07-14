@@ -135,7 +135,7 @@ atcoder-tools submit
 | ABC060  | A: | B: | C:                                | D:              |    |    |
 | ABC059  | A: | B: | C:                                | D:              |    |    |
 | ABC058  | A: | B: | C:                                | D:              |    |    |
-| ABC057  | A: | B: | C:                                | D:              |    |    |
+| ABC057  | A: | B: | C: 約数列挙，<br>　 パターン発見  | D:              |    |    |
 | ABC056  | A: | B: | C:                                | D:              |    |    |
 | ABC055  | A: | B: | C:                                | D:              |    |    |
 | ABC054  | A: | B: | C:                                | D:              |    |    |
