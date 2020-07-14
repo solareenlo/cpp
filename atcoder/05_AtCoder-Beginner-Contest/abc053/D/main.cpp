@@ -1,24 +1,20 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
+int main() {
+	cin.tie(0)->sync_with_stdio(false);
 
-void solve(long long N, std::vector<long long> A){
+	int N; cin >> N;
+	set<int> a;
+	REP(i, N) {
+		int tmp;
+		cin >> tmp;
+		a.insert(tmp);
+	}
 
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<long long> A(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&A[i]);
-    }
-    solve(N, std::move(A));
-    return 0;
+	int n = a.size();
+	if (n % 2) cout << n << '\n';
+	else cout << n - 1 << '\n';
+	return 0;
 }
