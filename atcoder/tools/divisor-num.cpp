@@ -2,7 +2,8 @@
 #include <iostream>
 using namespace std;
 
-template<class T, class U> inline int divCount(T &num, U divisor) {
+template<class T, class U>
+inline int divCount(T &num, U divisor) {
     int count = 0;
     while (num % divisor == 0) {
         num /= divisor;
