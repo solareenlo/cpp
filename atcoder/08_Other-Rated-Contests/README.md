@@ -1,1 +1,48 @@
 # [Other Rated Contests](https://kenkoooo.com/atcoder/#/table/)
+
+## テクニック 一覧
+
+| Contest | A  | B  | C                         | D                       | E  | F  |
+|---------|----|----|---------------------------|-------------------------|----|----|
+| ORC042  | A: | B: | C:                        | D: popcount,<br>　 slog | E: | F: |
+| ORC041  | A: | B: | C: テトリス,<br>　 累積和 | D:                      | E: | F: |
+| ORC040  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC039  | A: | B: | C: 式変換                 | D:                      | E: | F: |
+| ORC038  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC037  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC036  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC035  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC034  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC033  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC032  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC031  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC030  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC029  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC028  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC027  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC026  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC025  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC024  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC023  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC022  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC021  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC020  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC019  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC018  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC017  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC016  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC015  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC014  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC013  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC012  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC011  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC010  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC009  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC008  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC007  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC006  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC005  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC004  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC003  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC002  | A: | B: | C:                        | D:                      | E: | F: |
+| ORC001  | A: | B: | C:                        | D:                      | E: | F: |
