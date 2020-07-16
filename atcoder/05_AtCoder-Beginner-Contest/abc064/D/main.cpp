@@ -1,22 +1,31 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
+int main() {
+	cin.tie(0)->sync_with_stdio(false);
 
-void solve(long long N, std::string S){
+	int n; cin >> n;
+	string s; cin >> s;
 
-}
+	int cnt = 0;
+	string res = s;
+	REP(i, n) {
+		if (s[i] == '(') cnt++;
+		else {
+			cnt--;
+			if (cnt < 0) {
+				res = '(' + res;
+				cnt++;
+			}
+		}
+	}
 
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::string S;
-    std::cin >> S;
-    solve(N, S);
-    return 0;
+	while (cnt) {
+		res += ')';
+		cnt--;
+	}
+
+	cout << res << '\n';
+	return 0;
 }
