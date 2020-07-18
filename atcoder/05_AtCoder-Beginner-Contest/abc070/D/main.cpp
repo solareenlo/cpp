@@ -1,59 +1,54 @@
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <numeric>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
-#define ALL(vec) (vec).begin(), (vec).end()
-#define SUM(...) accumulate(ALL(__VA_ARGS__),0LL)
-#define DSUM(...) accumulate(ALL(__VA_ARGS__),0.0)
 using namespace std;
 using ll = long long;
 using P = pair<int, int>;
 
-// 便利関数
-template <class T> inline bool chmin(T &a, T b) {if (a > b){a = b;return true;}return false;}
-template <class T> inline bool chmax(T &a, T b) {if (a < b){a = b;return true;}return false;}
-template<class T> inline auto max(const T& a){ return *max_element(ALL(a)); }
-template<class T> inline auto min(const T& a){ return *min_element(ALL(a)); }
-inline ll gcd(ll a,ll b){if(b == 0) return a;return  gcd(b,a%b);}
-inline ll lcm(ll a,ll b){ll g = gcd(a,b);return a / g * b;}
+struct Edge {
+	int to; // 辺の行き先
+	ll cost; // その辺を通るコスト
+	Edge(int t, ll c) : to(t), cost(c) { }
+};
 
-// 出力
-void print() { std::cout << '\n'; }
-template <class T>void print(const T &x) {std::cout << x <<'\n';}
-template <class T, class... Args>void print(const T &x, const Args &... args) {std::cout << x << " ";print(args...);}
+int main() {
+    cin.tie(0)->sync_with_stdio(false);
 
-const int INF = 2002002002;
+	int N; cin >> N; // 頂点の数は N
+	vector<vector<Edge> > G(N);
+	// グラフを隣接リストでセットする
+	REP(i, N - 1) { // 辺の数は N - 1
+		int a, b; cin >> a >> b; a--; b--;
+		ll c; cin >> c;
+		G[a].push_back(Edge(b, c));
+		G[b].push_back(Edge(a, c));
+	}
+	int Q; cin >> Q;
+	int K; cin >> K; K--; // K が始点
+	vector<int> x(Q), y(Q); REP(i, Q) cin >> x[i] >> y[i];
+	REP(i, Q) {
+		x[i]--;
+		y[i]--;
+	}
 
-void solve(long long N, std::vector<long long> a, std::vector<long long> b, std::vector<long long> c, long long Q, long long K, std::vector<long long> x, std::vector<long long> y){
+	// 最短距離を初期化
+	vector<ll> d(N, (ll)1e18);
+	d[K] = 0; // 始点 K への最短距離は 0
+	// 距離が小さい順に取り出せるよう greater<P> を指定
+    priority_queue<P, vector<P>, greater<P> > que;
+	que.push(P(0, K));
+	while (!que.empty()) {
+		P p = que.top();
+		que.pop();
+		int v = p.second; // 更新した頂点の中で距離が最小の頂点 v
+		if (d[v] < p.first) continue;
+		for (auto e : G[v]) { // 頂点 v から出る辺 e を走査
+			if (d[e.to] > d[v] + e.cost) {
+				d[e.to] = d[v] + e.cost;
+				que.push(P(d[e.to], e.to));
+			}
+		}
+	}
 
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<long long> a(N-1);
-    std::vector<long long> b(N-1);
-    std::vector<long long> c(N-1);
-    for(int i = 0 ; i < N-1 ; i++){
-        scanf("%lld",&a[i]);
-        scanf("%lld",&b[i]);
-        scanf("%lld",&c[i]);
-    }
-    long long Q;
-    scanf("%lld",&Q);
-    long long K;
-    scanf("%lld",&K);
-    std::vector<long long> x(Q);
-    std::vector<long long> y(Q);
-    for(int i = 0 ; i < Q ; i++){
-        scanf("%lld",&x[i]);
-        scanf("%lld",&y[i]);
-    }
-    solve(N, std::move(a), std::move(b), std::move(c), Q, K, std::move(x), std::move(y));
+	REP(i, Q) cout << d[x[i]] + d[y[i]] << '\n';
     return 0;
 }
