@@ -116,7 +116,7 @@ atcoder-tools submit
 | ABC079  | A: | B: | C:                                  | D:                                                                |    |    |
 | ABC078  | A: | B: | C:                                  | D:                                                                |    |    |
 | ABC077  | A: | B: | C:                                  | D:                                                                |    |    |
-| ABC076  | A: | B: | C:                                  | D:                                                                |    |    |
+| ABC076  | A: | B: | C: 文字列操作,<br>　 部分文字列     | D:                                                                |    |    |
 | ABC075  | A: | B: | C: 深さ優先探索,<br>　 辿り着けるか | D:                                                                |    |    |
 | ABC074  | A: | B: | C:                                  | D:                                                                |    |    |
 | ABC073  | A: | B: | C:                                  | D:                                                                |    |    |
