@@ -1,49 +1,44 @@
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <numeric>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
-#define ALL(vec) (vec).begin(), (vec).end()
-#define SUM(...) accumulate(ALL(__VA_ARGS__),0LL)
-#define DSUM(...) accumulate(ALL(__VA_ARGS__),0.0)
 using namespace std;
-using ll = long long;
-using P = pair<int, int>;
+using Graph = vector<vector<int> >;
 
-// 便利関数
-template <class T> inline bool chmin(T &a, T b) {if (a > b){a = b;return true;}return false;}
-template <class T> inline bool chmax(T &a, T b) {if (a < b){a = b;return true;}return false;}
-template<class T> inline auto max(const T& a){ return *max_element(ALL(a)); }
-template<class T> inline auto min(const T& a){ return *min_element(ALL(a)); }
-inline ll gcd(ll a,ll b){if(b == 0) return a;return  gcd(b,a%b);}
-inline ll lcm(ll a,ll b){ll g = gcd(a,b);return a / g * b;}
+// 深さ優先探索
+vector<bool> seen;
+void dfs(const Graph &G, int v) {
+	seen[v] = true; // v を訪問済みにする
 
-// 出力
-void print() { std::cout << '\n'; }
-template <class T>void print(const T &x) {std::cout << x <<'\n';}
-template <class T, class... Args>void print(const T &x, const Args &... args) {std::cout << x << " ";print(args...);}
-
-const int INF = 2002002002;
-
-void solve(long long N, long long M, std::vector<long long> a, std::vector<long long> b){
-
+	// v から行ける各頂点 next_v について
+	for (auto next_v : G[v]) {
+		if (seen[next_v]) continue ;
+		dfs(G, next_v);
+	}
 }
 
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long M;
-    scanf("%lld",&M);
-    std::vector<long long> a(M);
-    std::vector<long long> b(M);
-    for(int i = 0 ; i < M ; i++){
-        scanf("%lld",&a[i]);
-        scanf("%lld",&b[i]);
-    }
-    solve(N, M, std::move(a), std::move(b));
+int main() {
+    cin.tie(0)->sync_with_stdio(false);
+
+	int n, m;
+	cin >> n >> m;
+	vector<int> a(m), b(m);
+	REP(i, m) cin >> a[i] >> b[i];
+	REP(i, m) a[i]--, b[i]--;
+
+	int cnt = 0;
+	REP(i, m) {
+		// グラフをセットする
+		Graph G(n);
+		REP(j, m)
+			if (i != j) {
+				G[a[j]].push_back(b[j]);
+				G[b[j]].push_back(a[j]);
+			}
+		// 頂点 a[i] をスタートした探索を行う
+		seen.assign(n, false); // 全頂点を『未訪問』に初期化
+		dfs(G, a[i]);
+		if (!seen[b[i]]) cnt++;
+	}
+
+	cout << cnt << '\n';
     return 0;
 }

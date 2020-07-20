@@ -2,6 +2,7 @@
 
 ## [D - Transit Tree Path](https://atcoder.jp/contests/abc070/tasks/abc070_d)
 - 始点が任意の重みのある ダイクストラ法
+- 最短経路問題
 
 ### Reference
 - [Dijkstra法](https://qiita.com/ta-ka/items/a023a11efe17ab097433#dijkstra%E6%B3%95)
