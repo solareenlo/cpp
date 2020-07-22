@@ -1,32 +1,28 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
+using ll = long long;
 
+int main() {
+    cin.tie(0)->sync_with_stdio(false);
 
-void solve(long long N, std::vector<long long> A, std::vector<long long> B, std::vector<long long> C){
+	ll n; cin >> n;
+	vector<ll> a(n), b(n), c(n);
+	REP(i, n) cin >> a[i];
+	sort(a.begin(), a.end());
+	REP(i, n) cin >> b[i];
+	sort(b.begin(), b.end());
+	REP(i, n) cin >> c[i];
+	sort(c.begin(), c.end());
 
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<long long> A(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&A[i]);
-    }
-    std::vector<long long> B(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&B[i]);
-    }
-    std::vector<long long> C(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&C[i]);
-    }
-    solve(N, std::move(A), std::move(B), std::move(C));
+	ll res = 0;
+	REP(i, n) {
+		auto itr = lower_bound(a.begin(), a.end(), b[i]);
+		ll cnt_a = distance(a.begin(), itr);
+		itr = upper_bound(c.begin(), c.end(), b[i]);
+		ll cnt_c = distance(itr, c.end());
+		res += cnt_a * cnt_c;
+	}
+	cout << res << '\n';
     return 0;
 }
