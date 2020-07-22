@@ -113,7 +113,7 @@ atcoder-tools submit
 | ABC082  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC081  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC080  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC079  | A: | B: | C:                                              | D:                                                                |    |    |
+| ABC079  | A: | B: | C:                                              | D: コスト計算,<br>　 ワーシャルフロイド法                         |    |    |
 | ABC078  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC077  | A: | B: | C: 組合せ,<br>　 lower_bound,<br>　 upper_bound | D:                                                                |    |    |
 | ABC076  | A: | B: | C: 文字列操作,<br>　 部分文字列                 | D:                                                                |    |    |

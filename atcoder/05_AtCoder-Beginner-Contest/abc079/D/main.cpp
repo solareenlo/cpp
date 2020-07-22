@@ -1,34 +1,25 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
-#define REP(i, n) for (int i = 0; i < (n); i++)
+#include <bits/stdc++.h>
+#define REP(i, n) for (int (i) = 0; (i) < (n); (i)++)
 using namespace std;
 
+int main() {
+    cin.tie(0)->sync_with_stdio(false);
 
-void solve(long long H, long long W, std::vector<std::vector<long long>> c, std::vector<std::vector<long long>> A){
+	int h, w; cin >> h >> w;
 
-}
+	vector<vector<int> > c(10, vector<int>(10));
+	REP(i, 10) REP(j, 10) cin >> c[i][j];
+	// k が経由するポイント
+	REP(k, 10) REP(i, 10) REP(j, 10)
+		if (c[i][j] > c[i][k] + c[k][j])
+			c[i][j] = c[i][k] + c[k][j];
 
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long H;
-    scanf("%lld",&H);
-    long long W;
-    scanf("%lld",&W);
-    std::vector<std::vector<long long>> c(9-0+1, std::vector<long long>(9-0+1));
-    for(int i = 0 ; i < 9-0+1 ; i++){
-        for(int j = 0 ; j < 9-0+1 ; j++){
-            scanf("%lld",&c[i][j]);
-        }
-    }
-    std::vector<std::vector<long long>> A(H, std::vector<long long>(W));
-    for(int i = 0 ; i < H ; i++){
-        for(int j = 0 ; j < W ; j++){
-            scanf("%lld",&A[i][j]);
-        }
-    }
-    solve(H, W, std::move(c), std::move(A));
+	int res = 0;
+	REP(i, h) REP(j, w) {
+		int a; cin >> a;
+		if (a >= 0) res += c[a][1];
+	}
+
+	cout << res << '\n';
     return 0;
 }
