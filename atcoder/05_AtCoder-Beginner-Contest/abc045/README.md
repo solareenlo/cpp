@@ -7,18 +7,18 @@
 
 ### 例 `S = 125` を考える．
 #### 以下のような `bit 全探索` の2重ループを考える．
-	```c++
-	REP(bit, 1 << (n - 1)) {
-		REP(i, n) {
-			tmp += s[i] - '0';
-			if(bit >> i & 1 || i == n - 1) {
-				ans += tmp;
-				tmp = 0;
-			}
-			else tmp *= 10;
+```cpp
+REP(bit, 1 << (n - 1)) {
+	REP(i, n) {
+		tmp += s[i] - '0';
+		if(bit >> i & 1 || i == n - 1) {
+			ans += tmp;
+			tmp = 0;
 		}
+		else tmp *= 10;
 	}
-	```
+}
+```
 
 - 以下の場合は，`ans += 125`
 	|bit 表示|0 (4の位)|0 (2の位)|0 (1の位)|
@@ -41,18 +41,18 @@
 	|S の文字|1|2|5|
 
 #### もしくは，以下のような `bit 全探索` の2重ループを考える．
-  ```cpp
-  	REP(bit, 1 << (n - 1)) {
-  		string tmp;
-  		REP(i, n) {
-  			tmp += s[i];
-  			if (!(bit & (1 << i))) {
-  					res += stol(tmp);
-  					tmp = "";
-  			}
-  		}
-  	}
-  ```
+```cpp
+REP(bit, 1 << (n - 1)) {
+	string tmp;
+	REP(i, n) {
+		tmp += s[i];
+		if (!(bit & (1 << i))) {
+				res += stol(tmp);
+				tmp = "";
+		}
+	}
+}
+```
 
 - 以下の場合は，`ans += 1` と `ans += 2` と `ans += 5`
 	|bit 表示|0 (4の位)|0 (2の位)|0 (1の位)|
