@@ -108,11 +108,11 @@ atcoder-tools submit
 | ABC087  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC086  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC085  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC084  | A: | B: | C:                                              | D:                                                                |    |    |
+| ABC084  | A: | B: | C: パターン発見,<br>　 貪欲法                   | D:                                                                |    |    |
 | ABC083  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC082  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC081  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC080  | A: | B: | C: bit 全探索                                             | D:                                                                |    |    |
+| ABC080  | A: | B: | C: bit 全探索                                   | D:                                                                |    |    |
 | ABC079  | A: | B: | C:                                              | D: コスト計算,<br>　 ワーシャルフロイド法                         |    |    |
 | ABC078  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC077  | A: | B: | C: 組合せ,<br>　 lower_bound,<br>　 upper_bound | D:                                                                |    |    |

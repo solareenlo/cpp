@@ -1,28 +1,25 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
+int main() {
+    cin.tie(0)->sync_with_stdio(false);
 
-void solve(long long N, std::vector<long long> C, std::vector<long long> S, std::vector<long long> F){
+	int N; cin >> N;
+	vector<int> C(N, 0), S(N, 0), F(N, 0);
+	REP(i, N - 1) cin >> C[i] >> S[i] >> F[i];
 
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<long long> C(N-1);
-    std::vector<long long> S(N-1);
-    std::vector<long long> F(N-1);
-    for(int i = 0 ; i < N-1 ; i++){
-        scanf("%lld",&C[i]);
-        scanf("%lld",&S[i]);
-        scanf("%lld",&F[i]);
-    }
-    solve(N, std::move(C), std::move(S), std::move(F));
+	REP(i, N - 1) {
+		int res = S[i] + C[i];
+		for (int j = i + 1; j < N - 1; j++) {
+			if (res < S[j])
+				res = S[j];
+			else if (res % F[j])
+				res += F[j] - (res % F[j]);
+			res += C[j];
+		}
+		cout << res << '\n';
+	}
+	cout << 0 << '\n';
     return 0;
 }
