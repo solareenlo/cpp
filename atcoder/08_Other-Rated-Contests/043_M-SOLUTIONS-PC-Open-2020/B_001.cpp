@@ -7,6 +7,7 @@ int main() {
 	int r, g, b; cin >> r >> g >> b;
 	int k; cin >> k;
 
+	// 貪欲法
 	bool ok = true;
 	if (r >= g) {
 		while (true) {
