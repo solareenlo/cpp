@@ -108,7 +108,7 @@ atcoder-tools submit
 | ABC087  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC086  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC085  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC084  | A: | B: | C: パターン発見,<br>　 貪欲法                   | D:                                                                |    |    |
+| ABC084  | A: | B: | C: パターン発見,<br>　 貪欲法                   | D: エラトステネスの揮 (素数 の列挙),<br>　 累積和                 |    |    |
 | ABC083  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC082  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC081  | A: | B: | C:                                              | D:                                                                |    |    |
