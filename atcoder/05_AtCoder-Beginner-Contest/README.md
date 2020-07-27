@@ -104,7 +104,7 @@ atcoder-tools submit
 | ABC091  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC090  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC089  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC088  | A: | B: | C:                                              | D:                                                                |    |    |
+| ABC088  | A: | B: | C: 隣のセルとの差                               | D: グリッド,<br>　 幅優先探索                                     |    |    |
 | ABC087  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC086  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC085  | A: | B: | C: 3重ループを避ける                            | D: lower_bound,<br>　 パターン発見                                |    |    |
