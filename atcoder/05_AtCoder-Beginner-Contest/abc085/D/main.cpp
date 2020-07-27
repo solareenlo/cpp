@@ -1,56 +1,38 @@
-#include <algorithm>
-#include <iomanip>
-#include <iostream>
-#include <numeric>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
-#define ALL(vec) (vec).begin(), (vec).end()
-#define SUM(...) accumulate(ALL(__VA_ARGS__),0LL)
-#define DSUM(...) accumulate(ALL(__VA_ARGS__),0.0)
+#define ALL(a) (a).begin(),(a).end()
 using namespace std;
 using ll = long long;
-using P = pair<int, int>;
 
-// 便利関数
-template <class T> inline bool chmin(T &a, T b) {if (a > b){a = b;return true;}return false;}
-template <class T> inline bool chmax(T &a, T b) {if (a < b){a = b;return true;}return false;}
-template<class T> inline auto max(const T& a){ return *max_element(ALL(a)); }
-template<class T> inline auto min(const T& a){ return *min_element(ALL(a)); }
-inline ll gcd(ll a,ll b){if(b == 0) return a;return  gcd(b,a%b);}
-inline ll lcm(ll a,ll b){ll g = gcd(a,b);return a / g * b;}
+int main() {
+    cin.tie(0)->sync_with_stdio(false);
 
-// 入出力
-void print() { std::cout << '\n'; }
-template <class T>void print(const T &x) {std::cout << x <<'\n';}
-template <class T, class... Args>void print(const T &x, const Args &... args) {std::cout << x << " ";print(args...);}
-#define debug(var)  do{std::cerr << #var << " ↓ "<<"\n";view(var);}while(0);
-#define dbg cerr<<"🥺🥺🥺🥺🥺🥺"<<endl;
-template<typename T> void view(T e){std::cout << e << std::endl;}
-template<typename T> void view(const std::vector<T>& v){for(const auto& e : v){ std::cout << e << " "; } std::cout << std::endl;}
-template<typename T> void view(const std::vector<std::vector<T> >& vv){ for(const auto& v : vv){ view(v); } }
+	int n; cin >> n;
+	ll h; cin >> h;
+	vector<ll> a(n), b(n);
+	REP(i, n) cin >> a[i] >> b[i];
+	sort(ALL(a));
+	sort(ALL(b));
 
-// 初期時読み込み
-struct initial{initial(){cin.tie(0); ios::sync_with_stdio(0); cout<<fixed<<setprecision(15);};}initial_;
+	auto itr = lower_bound(ALL(b), a[n - 1]);
+	int index;
+	if (itr == b.end()) index = 0;
+	else index = distance(b.begin(), itr);
 
-const int INF = 2002002002;
+	ll cnt = 0;
+	for (int i = n - 1; i >= index; i--) {
+		h -= b[i];
+		cnt++;
+		if (h <= 0) break;
+	}
 
-void solve(long long N, long long H, std::vector<long long> a, std::vector<long long> b){
+	if (h > 0) {
+		ll div = h / a[n - 1];
+		ll rem = h % a[n - 1];
+		if (rem) cnt += div + 1;
+		else cnt += div;
+	}
 
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long H;
-    scanf("%lld",&H);
-    std::vector<long long> a(N);
-    std::vector<long long> b(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&a[i]);
-        scanf("%lld",&b[i]);
-    }
-    solve(N, H, std::move(a), std::move(b));
+	cout << cnt << '\n';
     return 0;
 }

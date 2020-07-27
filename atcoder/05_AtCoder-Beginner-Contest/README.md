@@ -107,7 +107,7 @@ atcoder-tools submit
 | ABC088  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC087  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC086  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC085  | A: | B: | C:                                              | D:                                                                |    |    |
+| ABC085  | A: | B: | C: 3重ループを避ける                            | D: lower_bound,<br>　 パターン発見                                |    |    |
 | ABC084  | A: | B: | C: パターン発見,<br>　 貪欲法                   | D: エラトステネスの揮 (素数 の列挙),<br>　 累積和                 |    |    |
 | ABC083  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC082  | A: | B: | C:                                              | D:                                                                |    |    |
