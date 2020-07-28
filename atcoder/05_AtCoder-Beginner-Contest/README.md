@@ -98,7 +98,7 @@ atcoder-tools submit
 | ABC097  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC096  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC095  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC094  | A: | B: | C:                                              | D:                                                                |    |    |
+| ABC094  | A: | B: | C: median                                       | D: lower_bound,<br>　 組合せ, パスカルの三角形                    |    |    |
 | ABC093  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC092  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC091  | A: | B: | C:                                              | D:                                                                |    |    |
