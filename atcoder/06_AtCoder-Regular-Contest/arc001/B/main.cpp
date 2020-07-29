@@ -1,29 +1,38 @@
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-using ll = long long;
+using P = pair<int, int>;
+
+const int cnt[6] = {1, -1, 5, -5, 10, -10};
 
 int main() {
-    cin.tie(0)->sync_with_stdio(false);
+	cin.tie(0)->sync_with_stdio(false);
 
-    int a, b;
-    cin >> a >> b;
+	int a, b; cin >> a >> b;
 
-    int diff = abs(b - a);
-    int div = diff / 10;
-    int rem = diff % 10;
+	queue<P> que;
+	vector<bool> ok(50);
+	ok[a] = true;
+	que.push(make_pair(a, 0));
+	int res = 0;
+	while (!que.empty()) {
+		P x = que.front();
+		que.pop();
+		if (x.first == b) {
+			res = x.second;
+			break ;
+		}
+		REP(i, 6) {
+			int j = x.first + cnt[i];
+			if (j >= 0) {
+				if (!ok[j]) {
+					ok[j] = true;
+					que.push(make_pair(j, x.second + 1));
+				}
+			}
+		}
+	}
 
-    int ans = div;
-    if (rem == 1) ans += 1;
-    if (rem == 2) ans += 2;
-    if (rem == 3) ans += 3;
-    if (rem == 4) ans += 2;
-    if (rem == 5) ans += 1;
-    if (rem == 6) ans += 2;
-    if (rem == 7) ans += 3;
-    if (rem == 8) ans += 3;
-    if (rem == 9) ans += 2;
-
-    cout << ans << '\n';
-    return 0;
+	cout << res << '\n';
+	return (0);
 }
