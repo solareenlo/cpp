@@ -1,4 +1,4 @@
-# [AtCoder Regular Contest 004](https://atcoder.jp/contests/arc004/tasks)
+# [AtCoder Regular Contest 004](https://atcoder.jp/contests/arc004)
 
 ## [B - 2点間距離の最大と最小 ( Maximum and Minimum )](https://atcoder.jp/contests/arc004/tasks/arc004_2)
 - パターン発見

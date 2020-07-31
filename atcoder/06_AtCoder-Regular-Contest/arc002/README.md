@@ -1,4 +1,4 @@
-# [AtCoder Regular Contest 002](https://atcoder.jp/contests/arc002/tasks)
+# [AtCoder Regular Contest 002](https://atcoder.jp/contests/arc002)
 
 ## [C - コマンド入力](https://atcoder.jp/contests/arc002/tasks/arc002_3)
 - 全探索

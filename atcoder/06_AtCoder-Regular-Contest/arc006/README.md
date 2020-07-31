@@ -1,4 +1,4 @@
-# [AtCoder Regular Contest 006](https://atcoder.jp/contests/arc006/tasks)
+# [AtCoder Regular Contest 006](https://atcoder.jp/contests/arc006)
 
 ## [C - 積み重ね](https://atcoder.jp/contests/arc006/tasks/arc006_3)
 - lower_bound を使う問題．

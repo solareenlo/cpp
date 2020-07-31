@@ -1,4 +1,4 @@
-# [AtCoder Regular Contest 008](https://atcoder.jp/contests/arc008/tasks)
+# [AtCoder Regular Contest 008](https://atcoder.jp/contests/arc008)
 
 ## [B - 謎のたこ焼きおじさん](https://atcoder.jp/contests/arc008/tasks/arc008_2)
 - kit の中に name の文字がなければ，`-1`．

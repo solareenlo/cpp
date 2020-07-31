@@ -1,4 +1,4 @@
-# [AtCoder Regular Contest 005](https://atcoder.jp/contests/arc005/tasks)
+# [AtCoder Regular Contest 005](https://atcoder.jp/contests/arc005)
 
 ## [B - P-CASカードと高橋君](https://atcoder.jp/contests/arc005/tasks/arc005_2)
 - 座標の予想計算
