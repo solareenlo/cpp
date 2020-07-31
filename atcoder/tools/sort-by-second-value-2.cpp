@@ -8,11 +8,10 @@ using namespace std;
 using P = pair<int, int>;
 
 inline bool compareBySecond(P &a, P &b) {
-    if (a.second != b.second) {
+    if (a.second != b.second)
         return a.second < b.second;
-    } else {
+    else
         return a.first < b.first;
-    }
 }
 
 int main(void) {
