@@ -1,4 +1,7 @@
-# [AtCoder Regular Contest 023](https://atcoder.jp/contests/arc023/tasks)
+# [AtCoder Regular Contest 023](https://atcoder.jp/contests/arc023)
+
+## [B - 謎の人物X](https://atcoder.jp/contests/arc023/tasks/arc023_2)
+- 移動できる偶奇 と 座標の合計の偶奇 は一致するという条件を使う問題．
 
 ## [A - 経過日数](https://atcoder.jp/contests/arc023/tasks/arc023_1)
 - 経過日数を計算できる式．
