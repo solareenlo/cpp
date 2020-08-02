@@ -1,1 +1,1 @@
-# [AtCoder Regular Contest 019](https://atcoder.jp/contests/arc019/tasks)
+# [AtCoder Regular Contest 019](https://atcoder.jp/contests/arc019)
