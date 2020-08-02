@@ -37,7 +37,9 @@
 | 3200 - 3599 | 銀色 | 上位 0.1%    | 81.0 - 85.3 | 化け物                                                                                         |
 | 3600 - 9999 | 金色 | 上位 0.02%   | 85.4 - 99.9 | 世界に9人                                                                                      |
 
-- Reference: [AtCoder（競技プログラミング）の色・ランクと実力評価、問題例(2020/06/22)](http://chokudai.hatenablog.com/entry/2019/02/11/155904)
+- Reference
+	- [AtCoder（競技プログラミング）の色・ランクと実力評価、問題例(2020/06/22)](http://chokudai.hatenablog.com/entry/2019/02/11/155904)
+	- [標準正規分布表](https://staff.aist.go.jp/t.ihara/normsdist.html)
 
 ### レーティングの中央値
 
