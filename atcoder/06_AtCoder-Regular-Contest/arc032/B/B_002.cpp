@@ -4,13 +4,10 @@ using namespace std;
 
 struct UnionFind {
     vector<int> par; // par[i]:iの親の番号 (例) par[3] = 2 : 3の親が2
-	vector<int> rank;
 
-	UnionFind(int N) : par(N), rank(N) { // 最初は全てが根であるとして初期化
-		REP(i, N) {
+	UnionFind(int N) : par(N) { //最初は全てが根であるとして初期化
+		REP(i, N)
 			par[i] = i;
-			rank[i] = 0;
-		}
 	}
 
 	int root(int x) { // データxが属する木の根を再帰で得る：root(x) = {xの木の根}
@@ -25,16 +22,10 @@ struct UnionFind {
 	}
 
 	void unite(int x, int y) { // xとyの木を併合
-		int rx = root(x); // xの根をrx
-		int ry = root(y); // yの根をry
-		if (rx == ry) return ; // xとyの根が同じ(=同じ木にある)時はそのまま
-		if (rank[rx] < rank[ry])
-			par[rx] = ry; // xの根rxをyの根ryにつける
-		else {
-			par[ry] = rx; // yの根ryをxの根rxにつける
-			if (rank[rx] == rank[ry])
-				rank[rx]++;
-		}
+		int rx = root(x); //xの根をrx
+		int ry = root(y); //yの根をry
+		if (rx == ry) return ; //xとyの根が同じ(=同じ木にある)時はそのまま
+		par[rx] = ry; //xとyの根が同じでない(=同じ木にない)時：xの根rxをyの根ryにつける
 	}
 };
 
@@ -57,6 +48,5 @@ int main() {
 	}
 
 	cout << cnt << '\n';
-
 	return 0;
 }
