@@ -1,5 +1,5 @@
 # [AtCoder Regular Contest](https://kenkoooo.com/atcoder/#/table/solareenlo)
-- ARC の勉強結果．
+- ARC を解いた結果．
 
 ## テクニック 一覧
 
@@ -74,7 +74,7 @@
 | ARC037  | A: | B:                                   | C:                                         | D: |    |    |
 | ARC036  | A: | B:                                   | C:                                         | D: |    |    |
 | ARC035  | A: | B:                                   | C:                                         | D: |    |    |
-| ARC034  | A: | B:                                   | C:                                         | D: |    |    |
+| ARC034  | A: | B: 桁 の合計,<br>　 パターン発見     | C:                                         | D: |    |    |
 | ARC033  | A: | B:                                   | C:                                         | D: |    |    |
 | ARC032  | A: | B: グルーピング,　 Union-Find        | C:                                         | D: |    |    |
 | ARC031  | A: | B: グリッド,　 深さ優先探索          | C:                                         | D: |    |    |
