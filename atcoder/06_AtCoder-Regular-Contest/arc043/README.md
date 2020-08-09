@@ -1,4 +1,4 @@
-# [AtCoder Regular Contest 043](https://atcoder.jp/contests/arc043/tasks)
+# [AtCoder Regular Contest 043](https://atcoder.jp/contests/arc043)
 
 ## [A - 点数変換](https://atcoder.jp/contests/arc043/tasks/arc043_a)
 - 全ての数に Q を足しても最小値と最大値の差は変わらないので，
