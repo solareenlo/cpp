@@ -1,22 +1,23 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
-
-void solve(std::string s, long long K){
-
-}
-
 int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    std::string s;
-    std::cin >> s;
-    long long K;
-    scanf("%lld",&K);
-    solve(s, K);
+    cin.tie(0)->sync_with_stdio(false);
+
+	string s; cin >> s;
+	int k; cin >> k;
+
+	set<string> sub;
+	REP(i, (int)s.size()) for (int j = 1; j <= k; j++)
+		sub.insert(s.substr(i, j));
+
+	int i = 1;
+	for (auto x : sub) {
+		if (i++ == k) {
+			cout << x << '\n';
+			return 0;
+		}
+	}
     return 0;
 }
