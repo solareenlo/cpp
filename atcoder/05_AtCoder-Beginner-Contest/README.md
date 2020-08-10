@@ -91,7 +91,7 @@ atcoder-tools submit
 | ABC105  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC104  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC103  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC102  | A: | B: | C:                                              | D:                                                                |    |    |
+| ABC102  | A: | B: | C: 数列,<br>　 パターン発見,<br>　 中央値                                             | D:                                                                |    |    |
 | ABC101  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC100  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC099  | A: | B: | C:                                              | D:                                                                |    |    |
