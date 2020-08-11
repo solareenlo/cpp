@@ -85,13 +85,13 @@ atcoder-tools submit
 | ABC111  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC110  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC109  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC108  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC107  | A: | B: | C:                                              | D:                                                                |    |    |
+| ABC108  | A: | B: | C: 整数論,<br>　 剰余演算,<br>　 パターン発見   | D:                                                                |    |    |
+| ABC107  | A: | B: | C: 蝋燭,<br>　 部分数列,<br>　 lr               | D:                                                                |    |    |
 | ABC106  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC105  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC104  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC103  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC102  | A: | B: | C: 数列,<br>　 パターン発見,<br>　 中央値                                             | D:                                                                |    |    |
+| ABC102  | A: | B: | C: 数列,<br>　 パターン発見,<br>　 中央値       | D:                                                                |    |    |
 | ABC101  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC100  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC099  | A: | B: | C:                                              | D:                                                                |    |    |
@@ -108,7 +108,7 @@ atcoder-tools submit
 | ABC088  | A: | B: | C: 隣のセルとの差                               | D: グリッド,<br>　 幅優先探索                                     |    |    |
 | ABC087  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC086  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC085  | A: | B: | C: 3重ループ を避ける                            | D: lower_bound,<br>　 パターン発見                                |    |    |
+| ABC085  | A: | B: | C: 3重ループ を避ける                           | D: lower_bound,<br>　 パターン発見                                |    |    |
 | ABC084  | A: | B: | C: パターン発見,<br>　 貪欲法                   | D: エラトステネスの揮 (素数 の列挙),<br>　 累積和                 |    |    |
 | ABC083  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC082  | A: | B: | C:                                              | D:                                                                |    |    |

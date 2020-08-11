@@ -1,22 +1,18 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
-#define REP(i, n) for (int i = 0; i < (n); i++)
+#include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
+int main() {
+    cin.tie(0)->sync_with_stdio(false);
 
-void solve(long long N, long long K){
+	int n, k; cin >> n >> k;
 
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long K;
-    scanf("%lld",&K);
-    solve(N, K);
+	ll res = 0;
+	res = pow(n / k, 3);
+	if (k % 2 == 0) {
+		int div = (n + k / 2) / k;
+		res += pow(div, 3);
+	}
+	cout << res << '\n';
     return 0;
 }
