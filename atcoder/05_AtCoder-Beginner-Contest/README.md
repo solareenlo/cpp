@@ -81,7 +81,7 @@ atcoder-tools submit
 | ABC115  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC114  | A: | B: | C:                                              | D:                                                                |    |    |
 | ABC113  | A: | B: | C:                                              | D:                                                                |    |    |
-| ABC112  | A: | B: | C:                                              | D:                                                                |    |    |
+| ABC112  | A: | B: | C: グリッド,<br>　 全探索,<br>　 条件見極め       | D:                                                                |    |    |
 | ABC111  | A: | B: | C: 数列 変換,<br>　 最頻値                      | D:                                                                |    |    |
 | ABC110  | A: | B: | C: 添字 の中の配列,<br>　 文字列比較            | D:                                                                |    |    |
 | ABC109  | A: | B: | C:                                              | D: グリッド,<br>　 一筆書き                                       |    |    |
