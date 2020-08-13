@@ -1,28 +1,35 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
+using P = pair<int, int>;
 
+int main() {
+    cin.tie(0)->sync_with_stdio(false);
 
-void solve(long long H, long long W, std::vector<std::vector<long long>> a){
+	int h, w; cin >> h >> w;
+	vector<vector<int> > a(h, vector<int>(w, 0));
+	REP(i, h) REP(j, w) cin >> a[i][j];
 
-}
+	vector<P> l, r;
+	REP(i, h) {
+		REP(j, w - 1) {
+			if (a[i][j] % 2) {
+				a[i][j+1]++;
+				l.push_back(make_pair(i+1, j+1));
+				r.push_back(make_pair(i+1, j+1+1));
+			}
+		}
+		if (i != h - 1 && a[i][w - 1] % 2) {
+			a[i+1][w-1]++;
+			l.push_back(make_pair(i+1, w-1+1));
+			r.push_back(make_pair(i+1+1, w-1+1));
+		}
+	}
 
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long H;
-    scanf("%lld",&H);
-    long long W;
-    scanf("%lld",&W);
-    std::vector<std::vector<long long>> a(H, std::vector<long long>(W));
-    for(int i = 0 ; i < H ; i++){
-        for(int j = 0 ; j < W ; j++){
-            scanf("%lld",&a[i][j]);
-        }
-    }
-    solve(H, W, std::move(a));
+	int n = l.size();
+	cout << n << '\n';
+	REP(i, n) {
+		cout << l[i].first << " " << l[i].second << " " << r[i].first << " " << r[i].second << '\n';
+	}
     return 0;
 }
