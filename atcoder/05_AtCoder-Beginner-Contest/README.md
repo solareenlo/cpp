@@ -80,7 +80,7 @@ atcoder-tools submit
 | ABC117  | A: | B: | C:                                               | D:                                                                |             |           |
 | ABC116  | A: | B: | C:                                               | D:                                                                |             |           |
 | ABC115  | A: | B: | C:                                               | D:                                                                |             |           |
-| ABC114  | A: | B: | C:                                               | D:                                                                |             |           |
+| ABC114  | A: | B: | C: 深さ優先探索,<br>　 パターン全列挙            | D:                                                                |             |           |
 | ABC113  | A: | B: | C: lower_bound までの個数,<br>　 添字 の中の配列 | D:                                                                |             |           |
 | ABC112  | A: | B: | C: グリッド,<br>　 全探索,<br>　 条件見極め      | D: 最大公約数,<br>　 数分割,<br>　 数列                           |             |           |
 | ABC111  | A: | B: | C: 数列 変換,<br>　 最頻値                       | D:                                                                |             |           |
