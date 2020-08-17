@@ -3,6 +3,8 @@
 using namespace std;
 
 int main() {
+    cin.tie(0)->sync_with_stdio(false);
+
 	int n, m; cin >> n >> m;
 	vector<vector<int> > s(m);
 	REP(i, m) {
@@ -17,19 +19,20 @@ int main() {
 	REP(i, m) cin >> p[i];
 
 	int res = 0;
-	REP(bit, (1 << n)) {
+	REP(bit, 1 << n) { // switch の on/off を bit 全探索
 		bool ok = true;
-		REP(j, m) { // 全ての電球を確かめる
+		REP(i, m) { // switch の全部を確かめる
 			int cnt = 0;
-			for (int id : s[j]) // それぞれの電球につながっている switch を確かめる
+			for (int id : s[i])
 				if ((bit >> id) & 1)
 					cnt++;
-			cnt %= 2; // 2 で割った余りを求めて
-			if (cnt != p[j]) // 条件と一致していなければ false
+			cnt %= 2;
+			if (cnt != p[i])
 				ok = false;
 		}
 		if (ok) res++;
 	}
+
 	cout << res << '\n';
-	return 0;
+    return 0;
 }
