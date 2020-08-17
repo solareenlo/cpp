@@ -53,7 +53,7 @@ atcoder-tools submit
 | ABC144  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC143  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC142  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
-| ABC141  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
+| ABC141  | A: | B: | C:                                               | D: priority_queue                                                               | E:                                                  | F:        |
 | ABC140  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC139  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC138  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
