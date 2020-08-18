@@ -52,8 +52,8 @@ atcoder-tools submit
 | ABC145  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC144  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC143  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
-| ABC142  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
-| ABC141  | A: | B: | C:                                               | D: priority_queue                                                               | E:                                                  | F:        |
+| ABC142  | A: | B: | C:                                               | D: 最大公約数,<br>　 素因数分解,<br>　 積集合                     | E:                                                  | F:        |
+| ABC141  | A: | B: | C:                                               | D: priority_queue                                                 | E:                                                  | F:        |
 | ABC140  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC139  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC138  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
