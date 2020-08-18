@@ -14,7 +14,7 @@ template<class T>
 T commonDivNum(T a, T b) {
     T n = gcd(a, b);
 
-    T res;
+    T res = 0;
     for (T i = 1; i <= sqrt(n); i++) {
         if (n % i == 0) {
             if (n / i == i) res += 1;
