@@ -4,22 +4,21 @@
 #include <numeric>
 using namespace std;
 
-int gcd(int a, int b) {
-    if (a == 0)
-        return b;
+template<class T>
+T gcd(T a, T b) {
+    if (a == 0) return b;
     return gcd(b % a, a);
 }
 
-int commonDivNum(int a, int b) {
-    int n = gcd(a, b);
+template<class T>
+T commonDivNum(T a, T b) {
+    T n = gcd(a, b);
 
-    int res;
-    for (int i = 1; i <= sqrt(n); i++) {
+    T res;
+    for (T i = 1; i <= sqrt(n); i++) {
         if (n % i == 0) {
-            if (n / i == i)
-                res += 1;
-            else
-                res += 2;
+            if (n / i == i) res += 1;
+            else res += 2;
         }
     }
     return res;
