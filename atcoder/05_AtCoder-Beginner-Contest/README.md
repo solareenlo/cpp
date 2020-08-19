@@ -69,7 +69,7 @@ atcoder-tools submit
 | ABC128  | A: | B: | C: bit 全探索,<br>　 スイッチ                    | D:                                                                | E:                                                  | F:        |
 | ABC127  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC126  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
-| ABC125  | A: | B: | C:                                               | D:                                                                |                                                     |           |
+| ABC125  | A: | B: | C:                                               | D: 符号反転,<br>　 パターン発見                                   |                                                     |           |
 | ABC124  | A: | B: | C:                                               | D:                                                                |                                                     |           |
 | ABC123  | A: | B: | C:                                               | D:                                                                |                                                     |           |
 | ABC122  | A: | B: | C:                                               | D:                                                                |                                                     |           |
