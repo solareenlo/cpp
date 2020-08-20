@@ -1,24 +1,18 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
+int main() {
+	int n, x, y; cin >> n >> x >> y;
+	x--;
+	y--;
 
-void solve(long long N, long long X, long long Y){
+	vector<int> res(n, 0);
+	REP(i, n) for (int j = i + 1; j < n; j++) {
+		int mini = min(min(abs(j - i), abs(x - i) + 1 + abs(y - j)), abs(y - i) + 1 + abs(x - j));
+		res[--mini]++;
+	}
 
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long X;
-    scanf("%lld",&X);
-    long long Y;
-    scanf("%lld",&Y);
-    solve(N, X, Y);
+	REP(i, n - 1) cout << res[i] << '\n';
     return 0;
 }

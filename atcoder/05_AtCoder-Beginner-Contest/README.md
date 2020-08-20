@@ -34,7 +34,7 @@ atcoder-tools submit
 | ABC163  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC162  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC161  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
-| ABC160  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
+| ABC160  | A: | B: | C:                                               | D: パターン発見,<br>　 3パターン の 進み方                        | E:                                                  | F:        |
 | ABC159  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC158  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC157  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
