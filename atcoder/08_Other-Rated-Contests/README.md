@@ -44,6 +44,6 @@
 | ORC006  | A: | B:                                              | C:                         | D:                                                        | E: | F: |
 | ORC005  | A: | B:                                              | C:                         | D:                                                        | E: | F: |
 | ORC004  | A: | B:                                              | C:                         | D:                                                        | E: | F: |
-| ORC003  | A: | B:                                              | C:                         | D:                                                        | E: | F: |
+| ORC003  | A: | B: 間の個数,<br>　 パターン発見                 | C:                         | D:                                                        | E: | F: |
 | ORC002  | A: | B:                                              | C:                         | D:                                                        | E: | F: |
 | ORC001  | A: | B:                                              | C: TLE に気を付ける 全探索 | D:                                                        | E: | F: |
