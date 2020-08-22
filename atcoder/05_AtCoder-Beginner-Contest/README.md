@@ -68,7 +68,7 @@ atcoder-tools submit
 | ABC130  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC129  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC128  | A: | B: | C: bit 全探索,<br>　 スイッチ                    | D:                                                                | E:                                                  | F:        |
-| ABC127  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
+| ABC127  | A: | B: | C:                                               | D: 貪欲法,<br>　 パターン発見,<br>　 降順 昇順 比較               | E:                                                  | F:        |
 | ABC126  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC125  | A: | B: | C:                                               | D: 符号反転,<br>　 パターン発見                                   |                                                     |           |
 | ABC124  | A: | B: | C:                                               | D:                                                                |                                                     |           |

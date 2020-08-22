@@ -1,32 +1,37 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
+using ll = long long;
+using P = pair<ll, ll>;
 
+int main() {
+    cin.tie(0)->sync_with_stdio(false);
 
-void solve(long long N, long long M, std::vector<long long> A, std::vector<long long> B, std::vector<long long> C){
+	int n, m; cin >> n >> m;
+	vector<ll> a(n); REP(i, n) cin >> a[i];
+	sort(a.begin(), a.end());
+	vector<P> bc(m);
+	REP(i, m) cin >> bc[i].second >> bc[i].first;
+	sort(bc.rbegin(), bc.rend());
 
-}
+	int cnt = 0;
+	vector<ll> d;
+	while (n > (int)d.size()) {
+		REP(i, bc[cnt].second)
+			d.push_back(bc[cnt].first);
+		cnt++;
+		if (cnt == m) break ;
+	}
+	sort(d.rbegin(), d.rend());
 
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long M;
-    scanf("%lld",&M);
-    std::vector<long long> A(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&A[i]);
-    }
-    std::vector<long long> B(M);
-    std::vector<long long> C(M);
-    for(int i = 0 ; i < M ; i++){
-        scanf("%lld",&B[i]);
-        scanf("%lld",&C[i]);
-    }
-    solve(N, M, std::move(A), std::move(B), std::move(C));
+	ll res = 0;
+	if (n <= (int)d.size()) {
+		REP(i, n) res += max(a[i], d[i]);
+	} else {
+		REP(i, n - (int)d.size())
+			d.push_back(0);
+		REP(i, n) res += max(a[i], d[i]);
+	}
+	cout << res << '\n';
     return 0;
 }
