@@ -65,7 +65,7 @@ atcoder-tools submit
 | ABC133  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC132  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC131  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
-| ABC130  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
+| ABC130  | A: | B: | C:                                               | D: 累積和 に lower_bound                                          | E:                                                  | F:        |
 | ABC129  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC128  | A: | B: | C: bit 全探索,<br>　 スイッチ                    | D:                                                                | E:                                                  | F:        |
 | ABC127  | A: | B: | C:                                               | D: 貪欲法,<br>　 パターン発見,<br>　 降順 昇順 比較               | E:                                                  | F:        |

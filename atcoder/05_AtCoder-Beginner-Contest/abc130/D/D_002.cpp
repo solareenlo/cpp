@@ -11,14 +11,21 @@ int main() {
 	vector<ll> a(n);
 	REP(i, n) cin >> a[i];
 
-	vector<ll> s(n + 1, 0);
-	REP(i, n) s[i + 1] += s[i] + a[i];
-
-	ll cnt = 0;
-	REP(i, n) {
-		ll pos = lower_bound(s.begin(), s.end(), s[i] + k) - s.begin();
-		cnt += n - pos + 1;
+	ll res, sum;
+	res = sum = 0;
+	int r = 0;
+	REP(l, n) {
+		while (sum < k) {
+			if (r == n) break ;
+			else {
+				sum += a[r];
+				r++;
+			}
+		}
+		if (sum < k) break ;
+		res += n - r + 1;
+		sum -= a[l];
 	}
-	cout << cnt << '\n';
+	cout << res << '\n';
 	return 0;
 }

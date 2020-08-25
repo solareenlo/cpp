@@ -4,21 +4,22 @@ using namespace std;
 using ll = long long;
 
 int main() {
-	cin.tie(0)->sync_with_stdio(false);
+    cin.tie(0)->sync_with_stdio(false);
 
-	int n; cin >> n;
-	ll k; cin >> k;
+	int n, k; cin >> n >> k;
 	vector<ll> a(n);
 	REP(i, n) cin >> a[i];
 
 	vector<ll> s(n + 1, 0);
-	REP(i, n) s[i + 1] += s[i] + a[i];
+	REP(i, n) s[i+1] += s[i] + a[i];
 
 	ll cnt = 0;
-	REP(i, n) {
-		ll pos = lower_bound(s.begin(), s.end(), s[i] + k) - s.begin();
-		cnt += n - pos + 1;
+	REP(i, n) for (int j = i + 1; j <= n; j++) {
+		if (s[j] - s[i] >= k) {
+			cnt += n - j + 1;
+			break ;
+		}
 	}
 	cout << cnt << '\n';
-	return 0;
+    return 0;
 }
