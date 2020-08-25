@@ -32,7 +32,7 @@ atcoder-tools submit
 | ABC166  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC165  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC164  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
-| ABC163  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
+| ABC163  | A: | B: | C:                                               | D: 階段上の図形 の 範囲の和,<br>　 パターン発見                   | E:                                                  | F:        |
 | ABC162  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC161  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC160  | A: | B: | C:                                               | D: パターン発見,<br>　 3パターン の 進み方                        | E:                                                  | F:        |
@@ -57,7 +57,7 @@ atcoder-tools submit
 | ABC141  | A: | B: | C:                                               | D: priority_queue                                                 | E:                                                  | F:        |
 | ABC140  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC139  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
-| ABC138  | A: | B: | C:                                               | D: 深さ優先探索,<br>　 改変                                                               | E:                                                  | F:        |
+| ABC138  | A: | B: | C:                                               | D: 深さ優先探索,<br>　 改変                                       | E:                                                  | F:        |
 | ABC137  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC136  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC135  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
