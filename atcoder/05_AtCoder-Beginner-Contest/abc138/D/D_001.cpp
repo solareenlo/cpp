@@ -14,19 +14,27 @@ void dfs(int i, int p) {
 }
 
 int main() {
-	cin.tie(0)->sync_with_stdio(false);
+    cin.tie(0)->sync_with_stdio(false);
 
 	int n, q; cin >> n >> q;
+
 	REP(i, n - 1) {
 		int a, b; cin >> a >> b;
 		G[--a].push_back(--b);
 		G[b].push_back(a);
 	}
+
 	REP(i, q) {
 		int p, x; cin >> p >> x;
 		res[--p] += x;
 	}
+
 	dfs(0, 0);
-	REP(i, n) cout << res[i] << " ";
-	return 0;
+	REP(i, n) {
+		cout << res[i];
+		if (i != n - 1) cout << " ";
+	}
+	cout << '\n';
+
+    return 0;
 }

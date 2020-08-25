@@ -57,7 +57,7 @@ atcoder-tools submit
 | ABC141  | A: | B: | C:                                               | D: priority_queue                                                 | E:                                                  | F:        |
 | ABC140  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC139  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
-| ABC138  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
+| ABC138  | A: | B: | C:                                               | D: 深さ優先探索,<br>　 改変                                                               | E:                                                  | F:        |
 | ABC137  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC136  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC135  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
