@@ -19,4 +19,4 @@
 
 ### Reference
 - [よくやる 二項係数 (nCk mod. p)、 逆元 (a^-1 mod. p) の求め方](https://drken1215.hatenablog.com/entry/2018/06/08/210000)
-- [競プロでよく使う 二項係数 (nCk)を素数(p)で割った余りの計算と 逆元 のまとめ](https://algo-logic.info/combination/#toc_id_4)
+- [競プロでよく使う 二項係数 (nCk)を素数(p)で割った余りの計算と 逆元 のまとめ](https://algo-logic.info/combination)
