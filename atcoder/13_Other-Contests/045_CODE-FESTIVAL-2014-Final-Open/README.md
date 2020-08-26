@@ -1,4 +1,4 @@
-# [CODE FESTIVAL 2014 決勝（オープン）](https://atcoder.jp/contests/code-festival-2014-final-open/tasks)
+# [CODE FESTIVAL 2014 決勝（オープン）](https://atcoder.jp/contests/code-festival-2014-final-open)
 
 ## [C - N進数](https://atcoder.jp/contests/code-festival-2014-final/tasks/code_festival_final_c)
 - `f(23) = pow(23, 0) * 3 + pow(23, 1) * 2;`
