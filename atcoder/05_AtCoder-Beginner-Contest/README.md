@@ -62,7 +62,7 @@ atcoder-tools submit
 | ABC136  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC135  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC134  | A: | B: | C:                                               | D: for文 の使い方,<br>　 総和 の 偶奇                             | E:                                                  | F:        |
-| ABC133  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
+| ABC133  | A: | B: | C:                                               | D: 円 循環,<br>　 数式変換,<br>　漸化式                                          | E:                                                  | F:        |
 | ABC132  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC131  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC130  | A: | B: | C:                                               | D: 累積和 に lower_bound                                          | E:                                                  | F:        |
