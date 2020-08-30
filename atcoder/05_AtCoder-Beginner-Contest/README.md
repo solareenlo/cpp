@@ -45,7 +45,7 @@ atcoder-tools submit
 | ABC154  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC153  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC152  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
-| ABC151  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
+| ABC151  | A: | B: | C:                                               | D: グリッド,<br>　 深さ優先探索,<br>　 全探索,<br>　 2点間の距離                                                               | E:                                                  | F:        |
 | ABC150  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC149  | A: | B: | C:                                               | D:                                                                | E:                                                  | F:        |
 | ABC148  | A: | B: | C:                                               | D:                                                                | E: 数列,<br>　 割り切れる数の個数,<br>　 数学的考察 | F:        |

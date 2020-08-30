@@ -1,36 +1,43 @@
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <numeric>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
-#define ALL(vec) (vec).begin(), (vec).end()
-#define SUM(...) accumulate(ALL(__VA_ARGS__),0LL)
-#define DSUM(...) accumulate(ALL(__VA_ARGS__),0.0)
 using namespace std;
-using ll = long long;
-using P = pair<int, int>;
 
-// 便利関数
-template <class T> inline bool chmin(T &a, T b) {if (a > b){a = b;return true;}return false;}
-template <class T> inline bool chmax(T &a, T b) {if (a < b){a = b;return true;}return false;}
-template<class T> inline auto max(const T& a){ return *max_element(ALL(a)); }
-template<class T> inline auto min(const T& a){ return *min_element(ALL(a)); }
-inline ll gcd(ll a,ll b){if(b == 0) return a;return  gcd(b,a%b);}
-inline ll lcm(ll a,ll b){ll g = gcd(a,b);return a / g * b;}
+const int dx[4] = {1, 0, -1, 0};
+const int dy[4] = {0, 1, 0, -1};
 
-// 出力
-void print() { std::cout << '\n'; }
-template <class T>void print(const T &x) {std::cout << x <<'\n';}
-template <class T, class... Args>void print(const T &x, const Args &... args) {std::cout << x << " ";print(args...);}
+int H, W;
+vector<string> field;
 
-const int INF = 2002002002;
+int seen[30][30];
+void dfs(int h, int w, int k) {
+	if (h >= H || h < 0 || w >= W || w < 0)
+		return ;
+	if (field[h][w] == '#')
+		return ;
+	if (seen[h][w] <= k)
+		return ;
+	else
+		seen[h][w] = k;
+	REP(i, 4)
+		dfs(h + dx[i], w + dy[i], k + 1);
+}
 
+int main() {
+	cin >> H >> W;
+	field.resize(H);
+	REP(i, H) cin >> field[i];
 
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    // Failed to predict input format
+	int maxi = 0;
+	REP(i, H) REP(j, W) {
+		if (field[i][j] == '.') {
+			memset(seen, 0x40, sizeof(seen));
+			dfs(i, j, 0);
+		REP(h, H) REP(w, W) {
+				if (seen[h][w] != seen[29][29])
+					maxi = max(maxi, seen[h][w]);
+			}
+		}
+	}
+	cout << maxi << '\n';
     return 0;
 }
