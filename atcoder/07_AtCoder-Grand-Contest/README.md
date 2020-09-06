@@ -28,7 +28,7 @@
 | AGC026  | A:                                                    | B:                             | C: | D: | E: | F: | F2: |
 | AGC025  | A:                                                    | B:                             | C: | D: | E: | F: | F2: |
 | AGC024  | A:                                                    | B:                             | C: | D: | E: | F: | F2: |
-| AGC023  | A:                                                    | B:                             | C: | D: | E: | F: | F2: |
+| AGC023  | A: 累積和,<br>　 二項係数                             | B:                             | C: | D: | E: | F: | F2: |
 | AGC022  | A:                                                    | B:                             | C: | D: | E: | F: | F2: |
 | AGC021  | A:                                                    | B:                             | C: | D: | E: | F: | F2: |
 | AGC020  | A:                                                    | B:                             | C: | D: | E: | F: | F2: |
