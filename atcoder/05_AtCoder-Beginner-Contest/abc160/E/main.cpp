@@ -1,40 +1,21 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
+using ll = long long;
 
+int main() {
+	cin.tie(0)->sync_with_stdio(false);
 
-void solve(long long X, long long Y, long long A, long long B, long long C, std::vector<long long> p, std::vector<long long> q, std::vector<long long> r){
-
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long X;
-    scanf("%lld",&X);
-    long long Y;
-    scanf("%lld",&Y);
-    long long A;
-    scanf("%lld",&A);
-    long long B;
-    scanf("%lld",&B);
-    long long C;
-    scanf("%lld",&C);
-    std::vector<long long> p(A);
-    for(int i = 0 ; i < A ; i++){
-        scanf("%lld",&p[i]);
-    }
-    std::vector<long long> q(B);
-    for(int i = 0 ; i < B ; i++){
-        scanf("%lld",&q[i]);
-    }
-    std::vector<long long> r(C);
-    for(int i = 0 ; i < C ; i++){
-        scanf("%lld",&r[i]);
-    }
-    solve(X, Y, A, B, C, std::move(p), std::move(q), std::move(r));
-    return 0;
+	int x, y, a, b, c; cin >> x >> y >> a >> b >> c;
+	vector<ll> p(a), q(b), r(c);
+	REP(i, a) cin >> p[i]; sort(p.rbegin(), p.rend());
+	REP(i, b) cin >> q[i]; sort(q.rbegin(), q.rend());
+	REP(i, c) cin >> r[i];
+	REP(i, x) r.push_back(p[i]);
+	REP(i, y) r.push_back(q[i]);
+	sort(r.rbegin(), r.rend());
+	ll res = 0;
+	REP(i, x + y) res += r[i];
+	cout << res << '\n';
+	return 0;
 }

@@ -36,7 +36,7 @@ atcoder-tools submit
 | ABC163  | A: | B: | C:                                                          | D: 階段上の図形 の 範囲の和,<br>　 パターン発見                   | E:                                                  | F:        |
 | ABC162  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
 | ABC161  | A: | B: | C:                                                          | D: パターン発見,<br>　 queue,<br>　 数字追加                      | E:                                                  | F:        |
-| ABC160  | A: | B: | C:                                                          | D: パターン発見,<br>　 3パターン の 進み方                        | E:                                                  | F:        |
+| ABC160  | A: | B: | C:                                                          | D: パターン発見,<br>　 3パターン の 進み方                        | E: パターン発見,<br>　 X + Y 個までの 合計          | F:        |
 | ABC159  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
 | ABC158  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
 | ABC157  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
