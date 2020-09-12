@@ -43,7 +43,7 @@ atcoder-tools submit
 | ABC156  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
 | ABC155  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
 | ABC154  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
-| ABC153  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
+| ABC153  | A: | B: | C:                                                          | D:                                                                | E: 動的計画法                                       | F:        |
 | ABC152  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
 | ABC151  | A: | B: | C:                                                          | D: グリッド,<br>　 深さ優先探索,<br>　 全探索,<br>　 2点間の距離  | E:                                                  | F:        |
 | ABC150  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |

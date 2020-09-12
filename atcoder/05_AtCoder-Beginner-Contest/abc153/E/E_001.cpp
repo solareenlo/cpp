@@ -1,28 +1,19 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
+int main() {
+    cin.tie(0)->sync_with_stdio(false);
 
-void solve(long long H, long long N, std::vector<long long> A, std::vector<long long> B){
+	int h, n; cin >> h >> n;
+	vector<int> a(n), b(n);
+	REP(i, n) cin >> a[i] >> b[i];
 
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long H;
-    scanf("%lld",&H);
-    long long N;
-    scanf("%lld",&N);
-    std::vector<long long> A(N);
-    std::vector<long long> B(N);
-    for(int i = 0 ; i < N ; i++){
-        scanf("%lld",&A[i]);
-        scanf("%lld",&B[i]);
-    }
-    solve(H, N, std::move(A), std::move(B));
+	vector<int> dp(h + 1, INT_MAX);
+	dp[0] = 0;
+	for (int i = 1; i <= h; i++)
+		REP(j, n)
+			dp[i] = min(dp[i], dp[max(0, i-a[j])] + b[j]);
+	cout << dp[h] << '\n';
     return 0;
 }
