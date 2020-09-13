@@ -51,7 +51,7 @@ atcoder-tools submit
 | ABC148  | A: | B: | C:                                                          | D:                                                                | E: 数列,<br>　 割り切れる数の個数,<br>　 数学的考察 | F:        |
 | ABC147  | A: | B: | C: bit 全探索,<br>　 正直者の人数,<br>　 __builtin_popcount | D:                                                                | E:                                                  | F:        |
 | ABC146  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
-| ABC145  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
+| ABC145  | A: | B: | C:                                                          | D: パターン発見,<br>　 二項係数                                   | E:                                                  | F:        |
 | ABC144  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
 | ABC143  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
 | ABC142  | A: | B: | C:                                                          | D: 最大公約数,<br>　 素因数分解,<br>　 積集合                     | E:                                                  | F:        |
