@@ -30,7 +30,7 @@
 | ORC020  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
 | ORC019  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
 | ORC018  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
-| ORC017  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
+| ORC017  | A: | B:                                              | C: パターン発見,<br>　 数列 の 並べ替え,<br>　 deque                  | D:                                                        | E: | F: |
 | ORC016  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
 | ORC015  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
 | ORC014  | A: | B: パターン発見,<br>　 操作回数                 | C:                                                                    | D:                                                        | E: | F: |
