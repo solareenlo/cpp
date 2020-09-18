@@ -57,7 +57,7 @@ atcoder-tools submit
 | ABC143  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
 | ABC142  | A: | B: | C:                                                          | D: 最大公約数,<br>　 素因数分解,<br>　 積集合                     | E:                                                  | F:        |
 | ABC141  | A: | B: | C:                                                          | D: priority_queue                                                 | E:                                                  | F:        |
-| ABC140  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
+| ABC140  | A: | B: | C:                                                          | D: パターン発見,<br>　 文字列操作,<br>　 右左                                                               | E:                                                  | F:        |
 | ABC139  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
 | ABC138  | A: | B: | C:                                                          | D: 深さ優先探索,<br>　 改変                                       | E:                                                  | F:        |
 | ABC137  | A: | B: | C:                                                          | D:                                                                | E:                                                  | F:        |
