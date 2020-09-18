@@ -27,7 +27,7 @@
 | ORC023  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
 | ORC022  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
 | ORC021  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
-| ORC020  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
+| ORC020  | A: | B:                                              | C:                                                                    | D: パターン発見,<br>　 偶数個 奇数個                      | E: | F: |
 | ORC019  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
 | ORC018  | A: | B:                                              | C:                                                                    | D:                                                        | E: | F: |
 | ORC017  | A: | B:                                              | C: パターン発見,<br>　 数列 の 並べ替え,<br>　 deque                  | D:                                                        | E: | F: |

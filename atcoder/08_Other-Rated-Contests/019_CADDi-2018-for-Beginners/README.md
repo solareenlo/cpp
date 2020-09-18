@@ -1,1 +1,1 @@
-# [CADDi 2018 for Beginners](https://atcoder.jp/contests/caddi2018b/tasks)
+# [CADDi 2018 for Beginners](https://atcoder.jp/contests/caddi2018b)
