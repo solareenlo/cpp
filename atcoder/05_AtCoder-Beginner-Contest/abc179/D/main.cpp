@@ -5,22 +5,29 @@ const int MOD = 998244353;
 
 int main() {
 	cin.tie(0)->sync_with_stdio(false);
+
 	int n, k; cin >> n >> k;
-	vector<int> l(k), r(k);
-	REP(i, k) cin >> l[i] >> r[i];
-	vector<int> dp(n + 1, 0);
-	dp[0] = 1;
-	dp[1] = -1; // テトリス累積和を使うので
-	// 配る DP
-	REP(i, n) {
-		dp[i + 1] = (dp[i + 1] + dp[i]) % MOD;
+	vector<int> L(k), R(k);
+	REP(i, k) cin >> L[i] >> R[i];
+	vector<int> dp(n + 1, 0), s(n + 1, 0);
+	dp[1] = s[1] = 1;
+	for(int i = 2; i <= n; i++) {
 		REP(j, k) {
-			if (i + l[j] < n)
-				dp[i + l[j]] = (dp[i + l[j]] + dp[i]) % MOD;
-			if (i + r[j] + 1 < n)
-				dp[i + r[j] + 1] = (((dp[i + r[j] + 1] - dp[i]) % MOD) + MOD) % MOD;
+			// L[i] ~ R[i] 分を増加させる
+			int l = i - R[j]; // 足すべき場所の左端
+			int r = i - L[j]; // 足すべき場所の右端
+			if (r < 1) continue ;
+			l = max(l, 1);
+			int sum = s[r] - s[l-1];
+			sum %= MOD;
+			sum += MOD;
+			sum %= MOD;
+			dp[i] += sum;
+			dp[i] %= MOD;
 		}
+		s[i] = s[i-1] + dp[i]; // 累積和の更新
+		s[i] %= MOD;
 	}
-	cout << dp[n - 1] << '\n';
+	cout << dp[n] << '\n';
 	return 0;
 }
