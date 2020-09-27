@@ -1,4 +1,7 @@
-# [CODE FESTIVAL 2017 qual A](https://atcoder.jp/contests/code-festival-2017-quala/tasks)
+# [CODE FESTIVAL 2017 qual A](https://atcoder.jp/contests/code-festival-2017-quala)
+
+## [C - Palindromic Matrix](https://atcoder.jp/contests/code-festival-2017-quala/tasks/code_festival_2017_quala_c)
+- 解説は Notion にあり．
 
 ## [B - fLIP](https://atcoder.jp/contests/code-festival-2017-quala/tasks/code_festival_2017_quala_b)
 - 反転させる場所は詰めて考えて良い．
