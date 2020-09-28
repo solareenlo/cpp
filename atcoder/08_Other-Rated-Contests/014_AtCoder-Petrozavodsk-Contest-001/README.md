@@ -1,5 +1,8 @@
 # [AtCoder Petrozavodsk Contest 001](https://atcoder.jp/contests/apc001)
 
+## [C - Vacant Seat](https://atcoder.jp/contests/apc001/tasks/apc001_c)
+- 解説は Notion にあり．
+
 ## [B - Two Arrays](https://atcoder.jp/contests/apc001/tasks/apc001_b)
 - 操作を1回行うと `sum(a[i])` は2増え，`sum(b[i])` は1増える．
 - つまり，操作回数は `sum(b[i]) - sum(a[i])` 回となる．
