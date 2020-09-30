@@ -1,22 +1,20 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
-#define REP(i, n) for (int i = 0; i < (n); i++)
+#include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
-
-void solve(long long A, long long B){
-
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long A;
-    scanf("%lld",&A);
-    long long B;
-    scanf("%lld",&B);
-    solve(A, B);
+int main() {
+	ll a, b; cin >> a >> b;
+	ll n = b - a;
+	ll res = 0;
+	if (a % 2 == 0) {
+		for (ll i = 0; i <= n % 4; i++)
+			res ^= (b - i);
+	}
+	if (a % 2) {
+		res = a;
+		for (ll i = 1; i <= n % 4; i++)
+			res ^= (b - i + 1);
+	}
+	cout << res << '\n';
     return 0;
 }
