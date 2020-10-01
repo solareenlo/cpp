@@ -1,55 +1,160 @@
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <numeric>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
-#define ALL(vec) (vec).begin(), (vec).end()
-#define SUM(...) accumulate(ALL(__VA_ARGS__),0LL)
-#define DSUM(...) accumulate(ALL(__VA_ARGS__),0.0)
 using namespace std;
-using ll = long long;
-using P = pair<int, int>;
 
-// 便利関数
-template <class T> inline bool chmin(T &a, T b) {if (a > b){a = b;return true;}return false;}
-template <class T> inline bool chmax(T &a, T b) {if (a < b){a = b;return true;}return false;}
-template<class T> inline auto max(const T& a){ return *max_element(ALL(a)); }
-template<class T> inline auto min(const T& a){ return *min_element(ALL(a)); }
-inline ll gcd(ll a,ll b){if(b == 0) return a;return  gcd(b,a%b);}
-inline ll lcm(ll a,ll b){ll g = gcd(a,b);return a / g * b;}
-
-// 出力
-void print() { std::cout << '\n'; }
-template <class T>void print(const T &x) {std::cout << x <<'\n';}
-template <class T, class... Args>void print(const T &x, const Args &... args) {std::cout << x << " ";print(args...);}
-
-const int INF = 2002002002;
-
-void solve(long long N, long long G, long long E, std::vector<long long> p, std::vector<long long> a, std::vector<long long> b){
-
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    long long G;
-    scanf("%lld",&G);
-    long long E;
-    scanf("%lld",&E);
-    std::vector<long long> p(G);
-    for(int i = 0 ; i < G ; i++){
-        scanf("%lld",&p[i]);
+namespace atcoder {
+namespace internal {
+template <class T> struct simple_queue {
+    std::vector<T> payload;
+    int pos = 0;
+    void reserve(int n) { payload.reserve(n); }
+    int size() const { return int(payload.size()) - pos; }
+    bool empty() const { return pos == int(payload.size()); }
+    void push(const T& t) { payload.push_back(t); }
+    T& front() { return payload[pos]; }
+    void clear() {
+        payload.clear();
+        pos = 0;
     }
-    std::vector<long long> a(E);
-    std::vector<long long> b(E);
-    for(int i = 0 ; i < E ; i++){
-        scanf("%lld",&a[i]);
-        scanf("%lld",&b[i]);
+    void pop() { pos++; }
+};
+}  // namespace internal
+
+template <class Cap> struct mf_graph {
+  public:
+    mf_graph() : _n(0) {}
+    mf_graph(int n) : _n(n), g(n) {}
+
+    int add_edge(int from, int to, Cap cap) {
+        assert(0 <= from && from < _n);
+        assert(0 <= to && to < _n);
+        assert(0 <= cap);
+        int m = int(pos.size());
+        pos.push_back({from, int(g[from].size())});
+        int from_id = int(g[from].size());
+        int to_id = int(g[to].size());
+        if (from == to) to_id++;
+        g[from].push_back(_edge{to, to_id, cap});
+        g[to].push_back(_edge{from, from_id, 0});
+        return m;
     }
-    solve(N, G, E, std::move(p), std::move(a), std::move(b));
-    return 0;
+
+    struct edge {
+        int from, to;
+        Cap cap, flow;
+    };
+
+    edge get_edge(int i) {
+        int m = int(pos.size());
+        assert(0 <= i && i < m);
+        auto _e = g[pos[i].first][pos[i].second];
+        auto _re = g[_e.to][_e.rev];
+        return edge{pos[i].first, _e.to, _e.cap + _re.cap, _re.cap};
+    }
+    std::vector<edge> edges() {
+        int m = int(pos.size());
+        std::vector<edge> result;
+        for (int i = 0; i < m; i++) {
+            result.push_back(get_edge(i));
+        }
+        return result;
+    }
+    void change_edge(int i, Cap new_cap, Cap new_flow) {
+        int m = int(pos.size());
+        assert(0 <= i && i < m);
+        assert(0 <= new_flow && new_flow <= new_cap);
+        auto& _e = g[pos[i].first][pos[i].second];
+        auto& _re = g[_e.to][_e.rev];
+        _e.cap = new_cap - new_flow;
+        _re.cap = new_flow;
+    }
+
+    Cap flow(int s, int t) {
+        return flow(s, t, std::numeric_limits<Cap>::max());
+    }
+    Cap flow(int s, int t, Cap flow_limit) {
+        assert(0 <= s && s < _n);
+        assert(0 <= t && t < _n);
+        assert(s != t);
+
+        std::vector<int> level(_n), iter(_n);
+        internal::simple_queue<int> que;
+
+        auto bfs = [&]() {
+            std::fill(level.begin(), level.end(), -1);
+            level[s] = 0;
+            que.clear();
+            que.push(s);
+            while (!que.empty()) {
+                int v = que.front();
+                que.pop();
+                for (auto e : g[v]) {
+                    if (e.cap == 0 || level[e.to] >= 0) continue;
+                    level[e.to] = level[v] + 1;
+                    if (e.to == t) return;
+                    que.push(e.to);
+                }
+            }
+        };
+        auto dfs = [&](auto self, int v, Cap up) {
+            if (v == s) return up;
+            Cap res = 0;
+            int level_v = level[v];
+            for (int& i = iter[v]; i < int(g[v].size()); i++) {
+                _edge& e = g[v][i];
+                if (level_v <= level[e.to] || g[e.to][e.rev].cap == 0) continue;
+                Cap d =
+                    self(self, e.to, std::min(up - res, g[e.to][e.rev].cap));
+                if (d <= 0) continue;
+                g[v][i].cap += d;
+                g[e.to][e.rev].cap -= d;
+                res += d;
+                if (res == up) break;
+            }
+            return res;
+        };
+
+        Cap flow = 0;
+        while (flow < flow_limit) {
+            bfs();
+            if (level[t] == -1) break;
+            std::fill(iter.begin(), iter.end(), 0);
+            while (flow < flow_limit) {
+                Cap f = dfs(dfs, t, flow_limit - flow);
+                if (!f) break;
+                flow += f;
+            }
+        }
+        return flow;
+    }
+
+  private:
+    int _n;
+    struct _edge {
+        int to, rev;
+        Cap cap;
+    };
+    std::vector<std::pair<int, int>> pos;
+    std::vector<std::vector<_edge>> g;
+};
+}  // namespace atcoder
+
+using namespace atcoder;
+
+int main() {
+	int n, g, e; cin >> n >> g >> e;
+	vector<int> p(n); REP(i, g) cin >> p[i];
+
+	mf_graph<int> graph(n + 1);
+	REP(i, e) {
+		int a, b; cin >> a >> b;
+		graph.add_edge(b, a, 1);
+		graph.add_edge(a, b, 1);
+	}
+	REP(i, g) {
+		graph.add_edge(p[i], n, 1);
+		graph.add_edge(n, p[i], 1);
+	}
+	cout << graph.flow(0, n) << '\n';
+	return 0;
 }
