@@ -1,4 +1,7 @@
-# [パナソニックプログラミングコンテスト2020](https://atcoder.jp/contests/panasonic2020/tasks)
+# [パナソニックプログラミングコンテスト2020](https://atcoder.jp/contests/panasonic2020)
+
+## [D - String Equivalence](https://atcoder.jp/contests/panasonic2020/tasks/panasonic2020_d)
+- 解説は Notion にあり．
 
 ## [C - Sqrt Inequality](https://atcoder.jp/contests/panasonic2020/tasks/panasonic2020_c)
 - 式を変換して，整数の大小関係を調べる．
