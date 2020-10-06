@@ -1,4 +1,7 @@
-# [AtCoder Grand Contest 034](https://atcoder.jp/contests/agc034/tasks)
+# [AtCoder Grand Contest 034](https://atcoder.jp/contests/agc034)
+
+## [B - ABC](https://atcoder.jp/contests/agc034/tasks/agc034_b)
+- 解説は Notion にあり．
 
 ## [A - Kenken Race](https://atcoder.jp/contests/agc034/tasks/agc034_a)
 - `C > D` の時，

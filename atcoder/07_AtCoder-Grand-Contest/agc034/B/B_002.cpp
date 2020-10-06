@@ -1,18 +1,18 @@
 #include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
+using ll = long long;
 
 int main() {
 	string s; cin >> s;
 	int n = s.size();
-	int cnt = 0;
-	long long res = 0;
+	ll cnt = 0, res = 0;
 	REP(i, n) {
-		if (s[i] == 'A') cnt++;
-		else if (s.substr(i, 2) == "BC") {
+		if (s.substr(i, 2) == "BC") {
 			res += cnt;
 			i++;
 		}
+		else if (s[i] == 'A') cnt++;
 		else cnt = 0;
 	}
 	cout << res << '\n';
