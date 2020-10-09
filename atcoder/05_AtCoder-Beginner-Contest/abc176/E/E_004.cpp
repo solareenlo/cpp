@@ -5,27 +5,27 @@ using P = pair<int, int>;
 
 int main() {
 	int H, W, M; cin >> H >> W >> M;
-	vector<int> cnth(H), cntw(W); // 各行，各列に対象物が何個あるかをカウント
-	set<P> s; // 対象物の座標を保存
+	vector<int> cnth(H), cntw(W);
+	set<P> s;
 	REP(i, M) {
-		int h, w; cin >> h >> w;
-		cnth[--h]++;
-		cntw[--w]++;
-		s.emplace(h, w);
+		int a, b; cin >> a >> b;
+		cnth[--a]++;
+		cntw[--b]++;
+		s.emplace(a, b);
 	}
 
-	int maxH = 0, maxW = 0; // 各行，各列の対象物の個数の最大数
+	int maxH = 0, maxW = 0;
 	REP(i, H) maxH = max(maxH, cnth[i]);
 	REP(i, W) maxW = max(maxW, cntw[i]);
 
-	vector<int> maxh, maxw; // 最大値がある行と列
+	vector<int> maxh, maxw;
 	REP(i, H) if (maxH == cnth[i]) maxh.push_back(i);
 	REP(i, W) if (maxW == cntw[i]) maxw.push_back(i);
 
-	int res = maxH + maxW; // 仮の答え
+	int res = maxH + maxW;
 	for (int h : maxh) for (int w : maxw) {
 		if (s.count(P(h, w))) continue ;
-		cout << res << '\n'; // 縦横が交差するマスに対象物がない場合はすぐ出力
+		cout << res << '\n';
 		return 0;
 	}
 	cout << res - 1 << '\n';
