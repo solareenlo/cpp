@@ -1,5 +1,8 @@
 # [diverta 2019 Programming Contest](https://atcoder.jp/contests/diverta2019)
 
+## [D - DivRem Number](https://atcoder.jp/contests/diverta2019/tasks/diverta2019_d)
+- 解説は Notion に有り．
+
 ## [C - AB Substrings](https://atcoder.jp/contests/diverta2019/tasks/diverta2019_c)
 - 文字列 S 中の AB の個数 = cnt
 - 先頭が B，末尾が A の場合 = cntAB
