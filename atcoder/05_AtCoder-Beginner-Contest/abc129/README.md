@@ -1,4 +1,7 @@
-# [AtCoder Beginner Contest 129](https://atcoder.jp/contests/abc129/tasks/abc129_c)
+# [AtCoder Beginner Contest 129](https://atcoder.jp/contests/abc129)
+
+## [D - Lamp](https://atcoder.jp/contests/abc129/tasks/abc129_d)
+- 解説は Notion に有り．
 
 ## [C: Typical Stairs](https://atcoder.jp/contests/abc129/tasks/abc129_c)
 - 数え上げに動的計画法を用いる問題．
