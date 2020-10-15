@@ -13,23 +13,23 @@ int main() {
 		g[b].push_back({a, i});
 	}
 	int maxi = 0;
-	vector<int> colors(n);
-	colors[0] = -1;
+	vector<int> color(n);
+	color[0] = -1;
 	vector<int> res(n - 1);
 	queue<int> q;
 	q.push(0);
 	while (!q.empty()) {
 		int v = q.front();
 		q.pop();
-		int color = 0;
+		int c = 0;
 		for (auto [u, id] : g[v]) {
-			if (colors[u]) continue ;
+			if (color[u]) continue ;
 			q.push(u);
-			color++;
-			if (color == colors[v]) color++;
-			res[id] = color;
-			colors[u] = color;
-			maxi = max(maxi, color);
+			c++;
+			if (c == color[v]) c++;
+			res[id] = c;
+			color[u] = c;
+			maxi = max(maxi, c);
 		}
 	}
 	cout << maxi << '\n';

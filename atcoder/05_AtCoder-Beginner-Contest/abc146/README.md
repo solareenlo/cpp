@@ -1,4 +1,7 @@
-# [AtCoder Beginner Contest 146](https://atcoder.jp/contests/abc146/tasks)
+# [AtCoder Beginner Contest 146](https://atcoder.jp/contests/abc146)
+
+## [D - Coloring Edges on Tree](https://atcoder.jp/contests/abc146/tasks/abc146_d)
+- 解説は Notion に有り．
 
 ## [C - Buy an Integer](https://atcoder.jp/contests/abc146/tasks/abc146_c)
 - 短調増加の関数なので二分探索を用いる問題．
