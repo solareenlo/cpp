@@ -1,4 +1,4 @@
-# [三井住友信託銀行プログラミングコンテスト2019](https://atcoder.jp/contests/sumitrust2019/tasks)
+# [三井住友信託銀行プログラミングコンテスト2019](https://atcoder.jp/contests/sumitrust2019)
 
 ## [D - Lucky PIN](https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_d)
 - 答えを `000 ~ 999` に 決め打ち して 貪欲法 の 全探索
