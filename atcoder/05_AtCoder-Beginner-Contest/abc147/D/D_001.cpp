@@ -9,15 +9,15 @@ int main() {
 	vector<ll> a(n);
 	REP(i, n) cin >> a[i];
 	ll res = 0;
-	REP(i, 60) {
+	REP(i, 60) { // 桁を縦に見ていく
 		ll one = 0;
-		REP(j, n) if (a[j] >> i & 1) one++;
-		ll zero = n - one;
-		ll now = one * zero % MOD;
+		REP(j, n) if (a[j] >> i & 1) one++; // bit が 1 の個数
+		ll zero = n - one; // bit が 0 の個数
+		ll now = one * zero % MOD; // 0 と 1 の組合せの個数
 		REP(j, i) now = now * 2 % MOD;
 		res += now;
 		res %= MOD;
 	}
 	cout << res << '\n';
-	return 0;
+    return 0;
 }
