@@ -8,6 +8,8 @@ struct dsu {
     dsu(int n) : _n(n), parent_or_size(n, -1) {}
 
     int merge(int a, int b) {
+        assert(0 <= a && a < _n);
+        assert(0 <= b && b < _n);
         int x = leader(a), y = leader(b);
         if (x == y) return x;
         if (-parent_or_size[x] < -parent_or_size[y]) std::swap(x, y);
@@ -16,20 +18,28 @@ struct dsu {
         return x;
     }
 
-    bool same(int a, int b) { return leader(a) == leader(b); }
+    bool same(int a, int b) {
+        assert(0 <= a && a < _n);
+        assert(0 <= b && b < _n);
+        return leader(a) == leader(b);
+    }
 
     int leader(int a) {
+        assert(0 <= a && a < _n);
         if (parent_or_size[a] < 0) return a;
         return parent_or_size[a] = leader(parent_or_size[a]);
     }
 
-    int size(int a) { return -parent_or_size[leader(a)]; }
+    int size(int a) {
+        assert(0 <= a && a < _n);
+        return -parent_or_size[leader(a)];
+    }
 
   private:
     int _n;
     std::vector<int> parent_or_size;
 };
-}
+}  // namespace atcoder
 using namespace atcoder;
 
 int main() {
@@ -50,6 +60,10 @@ int main() {
 			res[d]--;
 		}
 	}
-	REP(i, n) cout << res[i] << " ";
+	REP(i, n) {
+		cout << res[i];
+		if (i != n - 1) cout << " ";
+		else cout << '\n';
+	}
     return 0;
 }
