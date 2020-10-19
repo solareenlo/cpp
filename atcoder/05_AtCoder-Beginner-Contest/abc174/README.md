@@ -1,5 +1,8 @@
 # [AtCoder Beginner Contest 174](https://atcoder.jp/contests/abc174)
 
+## [E - Logs](https://atcoder.jp/contests/abc174/tasks/abc174_e)
+- 解説は Notion に有り．
+
 ## [D - Alter Altar](https://atcoder.jp/contests/abc174/tasks/abc174_d)
 - `W` を右側に詰めて配置する回数をカウントすれば良い．
 

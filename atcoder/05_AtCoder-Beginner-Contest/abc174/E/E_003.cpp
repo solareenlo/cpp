@@ -1,20 +1,18 @@
 #include <bits/stdc++.h>
+int n, k, l, r, mid, cnt;
 using namespace std;
-
 int main() {
-	int n, k; cin >> n >> k;
+	cin >> n >> k;
 	vector<int> a(n);
-	int l = 0, r = 0;
 	for (int &x : a) {
 		cin >> x;
 		r = max(r, x);
 	}
 	while (r - l > 1) {
-		int mid = (r + l) / 2;
-		int cnt = 0;
+		mid = (r + l) / 2;
+		cnt = 0;
 		for (int x : a) cnt += (x - 1) / mid;
-		if (cnt <= k) r = mid;
-		else l = mid;
+		((cnt <= k) ? r : l) = mid;
 	}
 	cout << r << '\n';
 	return 0;
