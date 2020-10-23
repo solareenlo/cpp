@@ -1,18 +1,20 @@
 #include <bits/stdc++.h>
-#define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 using ll = long long;
-
 int main() {
-    cin.tie(0)->sync_with_stdio(false);
-
-    ll a, b, c;
-    cin >> a >> b >> c;
-
-    ll ans = 0;
-    if (a + b >= c) ans = b + c;
-    else ans = a + b + b + 1;
-
-    cout << ans << '\n';
-    return 0;
+	ll a, b, c; cin >> a >> b >> c;
+	ll res = 0;
+	if (a < c) {
+		if (c - a < b) res += b + c;
+		else {
+			res += a;
+			res += min((c - a), b) * 2;
+			if (c - a > b) res++;
+		}
+	}
+	else {
+		res += c + b;
+	}
+	cout << res << '\n';
+	return 0;
 }
