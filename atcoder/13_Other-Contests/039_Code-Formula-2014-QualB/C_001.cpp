@@ -20,11 +20,11 @@ int main() {
 		c[b[i]-'a']++;
 	}
 
-	if(cnt > 6) cout << "NO1" << '\n';
-	else if(ok) cout << "YES1" << '\n';
+	if(cnt > 6) cout << "NO" << '\n';
+	else if(ok) cout << "YES" << '\n';
 	else {
-		if(cnt == 2 || cnt == 6) cout << "YES2" << '\n';
-		else cout << "NO2" << '\n';
+		if(cnt == 2 || cnt == 6) cout << "YES" << '\n';
+		else cout << "NO" << '\n';
 	}
 	return 0;
 }
