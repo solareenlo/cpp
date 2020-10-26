@@ -10,7 +10,7 @@ int main() {
 	REP(bit, 1<<h) REP(bit2, 1<<w) {
 		int cnt = 0;
 		REP(i, h) REP(j, w) {
-			if (!(bit & (1<<i)) && !(bit2 & (1<<j)) && c[i][j] == '#')
+			if (!(bit & 1<<i) && !(bit2 & 1<<j) && c[i][j] == '#')
 				cnt++;
 		}
 		if (cnt == k)
