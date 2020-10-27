@@ -6,14 +6,14 @@ int main() {
 	string res = "";
 	if (!n) res = "0";
 	while (n) {
-		if (n % 2) {
-			res.push_back('1');
+		if (!(n % 2)) res.push_back('0');
+		else {
 			n--;
+			res.push_back('1');
 		}
-		else res.push_back('0');
 		n /= -2;
 	}
 	reverse(res.begin(), res.end());
 	cout << res << '\n';
-	return 0;
+    return 0;
 }
