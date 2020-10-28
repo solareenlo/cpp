@@ -1,6 +1,9 @@
 # [AtCoder Grand Contest 032](https://atcoder.jp/contests/agc032)
 
-# [A - Limited Insertion](https://atcoder.jp/contests/agc032/tasks/agc032_a)
+## [B - Balanced Neighbors](https://atcoder.jp/contests/agc032/tasks/agc032_b)
+- 解説は Notion に有り．
+
+## [A - Limited Insertion](https://atcoder.jp/contests/agc032/tasks/agc032_a)
 - 答えから逆算して考える問題．
 - 答えがあるならば1通りしかない．
 - なぜならば，k 番目のボールには必ず k と書かれているから．
