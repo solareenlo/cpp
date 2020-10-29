@@ -1,30 +1,26 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 #define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
+int a, b, c, d, e, f;
+int resWS, resS;
+double maxi;
 
-void solve(long long A, long long B, long long C, long long D, long long E, long long F){
-
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long A;
-    scanf("%lld",&A);
-    long long B;
-    scanf("%lld",&B);
-    long long C;
-    scanf("%lld",&C);
-    long long D;
-    scanf("%lld",&D);
-    long long E;
-    scanf("%lld",&E);
-    long long F;
-    scanf("%lld",&F);
-    solve(A, B, C, D, E, F);
+int main() {
+	cin >> a >> b >> c >> d >> e >> f;
+	resWS = 100 * a;
+	REP(i, f/(100*a)+1) REP(j, f/(100*b)+1) {
+		int w = 100 * a * i + 100 * b * j;
+		if (w == 0) continue ;
+		REP(n, f/c+1) REP(m, f/d+1) {
+			int s = c * n + d * m;
+			if (w + s > f) continue ;
+			if (100 * s > e * w) continue ;
+			if (s * resWS <= resS * (w + s)) continue ;
+			resWS = w + s;
+			resS = s;
+		}
+	}
+	cout << resWS << " " << resS << '\n';
     return 0;
 }
