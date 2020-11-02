@@ -1,20 +1,22 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
-#define REP(i, n) for (int i = 0; i < (n); i++)
+#include <bits/stdc++.h>
 using namespace std;
 
-
-void solve(long long N){
-
+bool isPrime(int x) {
+	for (int i = 2; i*i <= x; i++)
+		if (x % i == 0) return false;
+	return true;
 }
 
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    long long N;
-    scanf("%lld",&N);
-    solve(N);
-    return 0;
+int main() {
+	int n; cin >> n;
+	for (int i = 2; i <= 55555; i++) {
+		if (isPrime(i) && i % 5 == 1) {
+			cout << i;
+			if (n != 1) cout << " ";
+			n--;
+		}
+		if (n == 0) break ;
+	}
+	cout << '\n';
+	return 0;
 }
