@@ -1,10 +1,20 @@
 #include <bits/stdc++.h>
-#define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-using ll = long long;
 
 int main() {
-    cin.tie(0)->sync_with_stdio(false);
-
+	int n, a, b; cin >> n >> a >> b;
+	bool t = false;
+	if (n <= a) t = true;
+	else if (n > a) {
+		if (a == b) {
+			if (n % (a + 1))
+				t = true;
+		}
+		else {
+			if (a > b)
+				t = true;
+		}
+	}
+	cout << (t ? "Takahashi" : "Aoki") << '\n';
     return 0;
 }
