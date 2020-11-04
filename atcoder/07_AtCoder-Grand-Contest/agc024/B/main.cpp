@@ -1,10 +1,13 @@
 #include <bits/stdc++.h>
-#define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-using ll = long long;
 
 int main() {
-    cin.tie(0)->sync_with_stdio(false);
-
-    return 0;
+	int n; cin >> n;
+	vector<int> dp(n + 1);
+	for (int i = 0; i < n; i++) {
+		int p; cin >> p;
+		dp[p] = dp[p - 1] + 1;
+	}
+	cout << n - *max_element(dp.begin(), dp.end()) << '\n';
+	return 0;
 }
