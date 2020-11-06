@@ -1,10 +1,13 @@
 #include <bits/stdc++.h>
-#define REP(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
-using ll = long long;
 
 int main() {
-    cin.tie(0)->sync_with_stdio(false);
-
-    return 0;
+	int n; cin >> n;
+	string s; cin >> s;
+	int res = 0;
+	res += count(s.begin(), s.end(), 'R') % 2;
+	res += count(s.begin(), s.end(), 'G') % 2;
+	res += count(s.begin(), s.end(), 'B') % 2;
+	cout << res << '\n';
+	return 0;
 }
