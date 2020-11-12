@@ -1,12 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-#include <atcoder/all>
-using namespace atcoder;
-#define REP(i, n) for (int i = 0; i < (n); i++)
-using ll = long long;
 
 int main() {
-    cin.tie(0)->sync_with_stdio(false);
-
-    return 0;
+	int n, m; cin >> n >> m;
+	if (m < 0 || m > max(0, n-2))
+		cout << -1 << '\n';
+	else {
+		cout << "1 " << 3+4*m << '\n';
+		for (int i = 0; i < n-1; i++)
+			cout << 2+i*4 << " " << (i+1)*4 << '\n';
+	}
+	return 0;
 }
