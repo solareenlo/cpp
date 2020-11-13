@@ -17,14 +17,6 @@ int main() {
 			st.push(P(m, n));
 			size += n;
 		}
-		if (s == "Top") {
-			if (size == 0) {
-				cout << "EMPTY" << '\n';
-				return 0;
-			}
-			cout << st.top().first << '\n';
-		}
-		if (s == "Size") cout << size << '\n';
 		if (s == "Pop") {
 			int n; cin >> n;
 			if (n > size) {
@@ -41,6 +33,14 @@ int main() {
 				st.pop();
 			}
 		}
+		if (s == "Top") {
+			if (size == 0) {
+				cout << "EMPTY" << '\n';
+				return 0;
+			}
+			cout << st.top().first << '\n';
+		}
+		if (s == "Size") cout << size << '\n';
 	}
 	cout << "SAFE" << '\n';
 	return 0;
