@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-#include <atcoder/all>
-using namespace atcoder;
-#define REP(i, n) for (int i = 0; i < (n); i++)
-using ll = long long;
 
 int main() {
-    cin.tie(0)->sync_with_stdio(false);
-
-    return 0;
+	int n; cin >> n;
+	string s; cin >> s;
+	for (int i = 2; i < s.size(); i++)
+		if (s[i-2] == 'f' && s[i-1] == 'o' && s[i] == 'x')
+			s.erase(i-2, 3), i -= 3;
+	cout << s.size() << '\n';
+	return 0;
 }
