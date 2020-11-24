@@ -5,16 +5,20 @@ using ll = long long;
 
 int main() {
 	int n, k; cin >> n >> k;
-	int s[n];
-	REP(i, n) cin >> s[i];
-	ll sum = 1;
 	int res = 0;
-	for (int r = 0, l = 0; r < n; r++) {
+	ll s[n];
+	REP(i, n) {
+		cin >> s[i];
+		if (s[i] == 0) res = n;
+	}
+	int l = 0;
+	ll sum = 1;
+	REP(r, n) {
 		sum *= s[r];
 		while (sum > k && l <= r)
 			sum /= s[l++];
 		res = max(res, r - l + 1);
 	}
-	cout << (sum ? res : n) << '\n';
-	return 0;
+	cout << res << '\n';
+    return 0;
 }
