@@ -1,22 +1,19 @@
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
-#define REP(i, n) for (int i = 0; i < (n); i++)
+#include <bits/stdc++.h>
 using namespace std;
 
-
-void solve(std::string s, std::string t){
-
-}
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    std::string s;
-    std::cin >> s;
-    std::string t;
-    std::cin >> t;
-    solve(s, t);
-    return 0;
+int main() {
+	string s, t; cin >> s >> t;
+	string s2 = s + s;
+	long long res = -1;
+	for (int i = 0; i < (int)t.size(); i++) {
+		string s3 = s2.substr((res + 1) % (int)s.size());
+		int pos = s3.find(t[i]);
+		if (pos == string::npos) {
+			cout << -1 << '\n';
+			return 0;
+		}
+		res += pos + 1;
+	}
+	cout << res + 1 << '\n';
+	return 0;
 }
