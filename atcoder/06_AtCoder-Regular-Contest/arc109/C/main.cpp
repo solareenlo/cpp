@@ -1,12 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
-#include <atcoder/all>
-using namespace atcoder;
-#define REP(i, n) for (int i = 0; i < (n); i++)
-using ll = long long;
+
+char f(char x, char y) {
+	string z{x, y};
+	if (z == "RP" || z == "PS" || z == "SR") return y;
+	else return x;
+}
 
 int main() {
-    cin.tie(0)->sync_with_stdio(false);
-
-    return 0;
+	int n, k; cin >> n >> k;
+	string t; cin >> t;
+	while (k--) {
+		string s = t + t;
+		t = "";
+		for (int i = 0; i < n; i++)
+			t += f(s[i*2], s[i*2+1]);
+	}
+	cout << t[0] << '\n';
+	return 0;
 }
